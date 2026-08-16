@@ -33,6 +33,9 @@ public class StorySessionManager : MonoBehaviour
     [Header("Edit Transition")]
     public float editToolsRevealDelay = 0.46f;
 
+    [Header("Overlay Manipulation")]
+    public float overlayRotateSpeed = 90f;
+
     [HideInInspector] public PhotoCard selectedPhoto;
     [HideInInspector] public PhotoCard editingPhoto;
     [HideInInspector] public OverlayItem selectedOverlay;
@@ -67,6 +70,29 @@ public class StorySessionManager : MonoBehaviour
     {
         if (ResetKeyPressed())
             ResetPrototype();
+
+        HandleSelectedOverlayManipulation();
+    }
+
+    private void HandleSelectedOverlayManipulation()
+    {
+        if (selectedOverlay == null || editingPhoto == null)
+            return;
+
+        float scroll = ReadScrollSteps();
+        if (!Mathf.Approximately(scroll, 0f))
+        {
+            selectedOverlay.ScaleBySteps(scroll);
+            SetStatus("Overlay selected: drag to move • scroll to scale • Z / X to rotate.");
+        }
+
+        float rotateDirection = ReadOverlayRotationDirection();
+        if (!Mathf.Approximately(rotateDirection, 0f))
+        {
+            selectedOverlay.RotateBy(
+                rotateDirection * overlayRotateSpeed * Time.deltaTime);
+            SetStatus("Overlay selected: drag to move • scroll to scale • Z / X to rotate.");
+        }
     }
 
     public void OnPhotoClicked(PhotoCard photo)
@@ -212,7 +238,7 @@ public class StorySessionManager : MonoBehaviour
         textAdds++;
         SelectOverlay(item);
         MarkEdited("add_text");
-        SetStatus("Text added. Drag it to reposition.");
+        SetStatus("Text added: drag to move • scroll to scale • Z / X to rotate.");
     }
 
     public void AddStickerOverlay(string symbol, Color color)
@@ -257,7 +283,7 @@ public class StorySessionManager : MonoBehaviour
         SelectOverlay(item);
         MarkEdited("add_sticker:" + symbol);
         SetActiveSafe(stickerPaletteRoot, false);
-        SetStatus("Sticker added. Drag it or select the trash bin to remove it.");
+        SetStatus("Sticker added: drag to move • scroll to scale • Z / X to rotate.");
     }
 
     public void SelectOverlay(OverlayItem item)
@@ -266,7 +292,10 @@ public class StorySessionManager : MonoBehaviour
             selectedOverlay.SetSelected(false);
         selectedOverlay = item;
         if (selectedOverlay != null)
+        {
             selectedOverlay.SetSelected(true);
+            SetStatus("Overlay selected: drag to move • scroll to scale • Z / X to rotate.");
+        }
     }
 
     public void DeleteSelectedOverlay()
@@ -388,6 +417,42 @@ public class StorySessionManager : MonoBehaviour
     private void SetActiveSafe(GameObject go, bool active)
     {
         if (go != null) go.SetActive(active);
+    }
+
+    private float ReadScrollSteps()
+    {
+#if ENABLE_INPUT_SYSTEM
+        if (Mouse.current != null)
+        {
+            float y = Mouse.current.scroll.ReadValue().y;
+            if (Mathf.Abs(y) > 0.01f)
+                return Mathf.Sign(y);
+        }
+#else
+        float y = Input.mouseScrollDelta.y;
+        if (Mathf.Abs(y) > 0.01f)
+            return Mathf.Sign(y);
+#endif
+        return 0f;
+    }
+
+    private float ReadOverlayRotationDirection()
+    {
+#if ENABLE_INPUT_SYSTEM
+        if (Keyboard.current != null)
+        {
+            float direction = 0f;
+            if (Keyboard.current.zKey.isPressed) direction += 1f;
+            if (Keyboard.current.xKey.isPressed) direction -= 1f;
+            return direction;
+        }
+#else
+        float direction = 0f;
+        if (Input.GetKey(KeyCode.Z)) direction += 1f;
+        if (Input.GetKey(KeyCode.X)) direction -= 1f;
+        return direction;
+#endif
+        return 0f;
     }
 
     private bool ResetKeyPressed()
