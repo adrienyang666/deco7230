@@ -10,6 +10,15 @@ public class PhotoCard : InteractiveObject
     public GameObject hoverFrame;
     public GameObject selectedFrame;
     public Transform overlayRoot;
+    public TextMesh captionText;
+
+    [Header("Browse Feedback")]
+    public float hoverScaleMultiplier = 1.03f;
+    public float selectedScaleMultiplier = 1.06f;
+    public float selectedForwardOffset = 0.24f;
+    public float browseFeedbackDuration = 0.18f;
+    public Color captionNormalColor = new Color(0.78f, 0.80f, 0.84f);
+    public Color captionSelectedColor = Color.white;
 
     [Header("Animation")]
     public float moveDuration = 0.45f;
@@ -22,6 +31,7 @@ public class PhotoCard : InteractiveObject
     private Coroutine moveRoutine;
     private bool selected;
     private bool editing;
+    private bool hovered;
 
     private void Awake()
     {
@@ -31,12 +41,32 @@ public class PhotoCard : InteractiveObject
 
         if (hoverFrame != null) hoverFrame.SetActive(false);
         if (selectedFrame != null) selectedFrame.SetActive(false);
+        UpdateCaptionVisual();
     }
 
-    public override void SetHovered(bool hovered)
+    public override void SetHovered(bool value)
     {
-        if (hoverFrame != null && !selected && !editing)
-            hoverFrame.SetActive(hovered);
+        hovered = value;
+
+        if (editing || selected)
+        {
+            if (hoverFrame != null)
+                hoverFrame.SetActive(false);
+            return;
+        }
+
+        if (hoverFrame != null)
+            hoverFrame.SetActive(value);
+
+        Vector3 targetScale = value
+            ? originalScale * hoverScaleMultiplier
+            : originalScale;
+
+        AnimateTo(
+            originalPosition,
+            originalRotation,
+            targetScale,
+            browseFeedbackDuration);
     }
 
     public override void Interact(SpatialInteractor interactor)
@@ -48,63 +78,150 @@ public class PhotoCard : InteractiveObject
     public void SetSelected(bool value)
     {
         selected = value;
+
         if (selectedFrame != null)
             selectedFrame.SetActive(value);
-        if (hoverFrame != null && value)
+
+        if (hoverFrame != null)
             hoverFrame.SetActive(false);
+
+        UpdateCaptionVisual();
+
+        if (editing)
+            return;
+
+        if (value)
+        {
+            // The selected card moves slightly toward the viewer so selection
+            // feels like picking up a physical photo rather than only changing colour.
+            Vector3 selectedPosition = originalPosition + Vector3.back * selectedForwardOffset;
+            AnimateTo(
+                selectedPosition,
+                originalRotation,
+                originalScale * selectedScaleMultiplier,
+                browseFeedbackDuration);
+        }
+        else
+        {
+            AnimateTo(
+                originalPosition,
+                originalRotation,
+                originalScale,
+                browseFeedbackDuration);
+        }
     }
 
     public void MoveToEditAnchor(Transform anchor)
     {
         if (anchor == null) return;
+
         editing = true;
-        SetSelected(true);
-        AnimateTo(anchor.position, anchor.rotation, originalScale * editScaleMultiplier);
+        selected = true;
+
+        if (hoverFrame != null)
+            hoverFrame.SetActive(false);
+
+        if (selectedFrame != null)
+            selectedFrame.SetActive(true);
+
+        UpdateCaptionVisual();
+
+        AnimateTo(
+            anchor.position,
+            anchor.rotation,
+            originalScale * editScaleMultiplier,
+            moveDuration);
     }
 
     public void MoveToPublishAnchor(Transform anchor)
     {
         if (anchor == null) return;
+
         editing = false;
-        AnimateTo(anchor.position, anchor.rotation, originalScale * publishScaleMultiplier);
+
+        if (hoverFrame != null)
+            hoverFrame.SetActive(false);
+
+        AnimateTo(
+            anchor.position,
+            anchor.rotation,
+            originalScale * publishScaleMultiplier,
+            moveDuration);
     }
 
     public void ReturnToWall()
     {
         editing = false;
-        SetSelected(false);
-        AnimateTo(originalPosition, originalRotation, originalScale);
+        selected = false;
+        hovered = false;
+
+        if (hoverFrame != null)
+            hoverFrame.SetActive(false);
+
+        if (selectedFrame != null)
+            selectedFrame.SetActive(false);
+
+        UpdateCaptionVisual();
+
+        AnimateTo(
+            originalPosition,
+            originalRotation,
+            originalScale,
+            moveDuration);
     }
 
     public void ClearOverlays()
     {
         if (overlayRoot == null) return;
+
         for (int i = overlayRoot.childCount - 1; i >= 0; i--)
             Destroy(overlayRoot.GetChild(i).gameObject);
     }
 
-    private void AnimateTo(Vector3 targetPosition, Quaternion targetRotation, Vector3 targetScale)
+    private void UpdateCaptionVisual()
+    {
+        if (captionText == null)
+            return;
+
+        captionText.color = selected || editing
+            ? captionSelectedColor
+            : captionNormalColor;
+    }
+
+    private void AnimateTo(
+        Vector3 targetPosition,
+        Quaternion targetRotation,
+        Vector3 targetScale,
+        float duration)
     {
         if (moveRoutine != null)
             StopCoroutine(moveRoutine);
-        moveRoutine = StartCoroutine(MoveRoutine(targetPosition, targetRotation, targetScale));
+
+        moveRoutine = StartCoroutine(
+            MoveRoutine(targetPosition, targetRotation, targetScale, duration));
     }
 
-    private IEnumerator MoveRoutine(Vector3 targetPosition, Quaternion targetRotation, Vector3 targetScale)
+    private IEnumerator MoveRoutine(
+        Vector3 targetPosition,
+        Quaternion targetRotation,
+        Vector3 targetScale,
+        float duration)
     {
         Vector3 startPosition = transform.position;
         Quaternion startRotation = transform.rotation;
         Vector3 startScale = transform.localScale;
         float elapsed = 0f;
 
-        while (elapsed < moveDuration)
+        while (elapsed < duration)
         {
             elapsed += Time.deltaTime;
-            float t = Mathf.Clamp01(elapsed / Mathf.Max(0.01f, moveDuration));
+            float t = Mathf.Clamp01(elapsed / Mathf.Max(0.01f, duration));
             float smooth = Mathf.SmoothStep(0f, 1f, t);
+
             transform.position = Vector3.Lerp(startPosition, targetPosition, smooth);
             transform.rotation = Quaternion.Slerp(startRotation, targetRotation, smooth);
             transform.localScale = Vector3.Lerp(startScale, targetScale, smooth);
+
             yield return null;
         }
 

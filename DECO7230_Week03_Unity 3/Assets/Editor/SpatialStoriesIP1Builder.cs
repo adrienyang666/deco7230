@@ -252,7 +252,7 @@ public static class SpatialStoriesIP1Builder
         hover.name = "HoverFrame";
         hover.transform.SetParent(root.transform, false);
         hover.transform.localPosition = new Vector3(0f, 0f, 0.055f);
-        hover.transform.localScale = new Vector3(1.88f, 1.40f, 0.035f);
+        hover.transform.localScale = new Vector3(1.86f, 1.38f, 0.030f);
         Object.DestroyImmediate(hover.GetComponent<Collider>());
         ApplyMaterial(hover, matHover);
 
@@ -260,7 +260,7 @@ public static class SpatialStoriesIP1Builder
         selected.name = "SelectedFrame_Yellow";
         selected.transform.SetParent(root.transform, false);
         selected.transform.localPosition = new Vector3(0f, 0f, 0.06f);
-        selected.transform.localScale = new Vector3(1.91f, 1.43f, 0.04f);
+        selected.transform.localScale = new Vector3(1.98f, 1.50f, 0.045f);
         Object.DestroyImmediate(selected.GetComponent<Collider>());
         ApplyMaterial(selected, matYellow);
 
@@ -283,11 +283,22 @@ public static class SpatialStoriesIP1Builder
         Object.DestroyImmediate(labelBack.GetComponent<Collider>());
         ApplyMaterial(labelBack, matPanel);
 
-        CreateWorldText("Caption", label, new Vector3(0f, -0.535f, -0.065f), 42, 0.040f, Color.white, TextAnchor.MiddleCenter, root.transform, true, true);
+        TextMesh caption = CreateWorldText(
+            "Caption",
+            label,
+            new Vector3(0f, -0.535f, -0.065f),
+            42,
+            0.040f,
+            new Color(0.78f, 0.80f, 0.84f),
+            TextAnchor.MiddleCenter,
+            root.transform,
+            true,
+            true);
 
         card.hoverFrame = hover;
         card.selectedFrame = selected;
         card.overlayRoot = overlayRoot.transform;
+        card.captionText = caption;
         hover.SetActive(false);
         selected.SetActive(false);
         return card;
@@ -412,12 +423,21 @@ public static class SpatialStoriesIP1Builder
         GameObject controlsPlate = GameObject.CreatePrimitive(PrimitiveType.Cube);
         controlsPlate.name = "ControlsPlate";
         controlsPlate.transform.SetParent(hud.transform);
-        controlsPlate.transform.position = new Vector3(0f, 4.02f, -3.55f);
-        controlsPlate.transform.localScale = new Vector3(6.2f, 0.54f, 0.10f);
+        controlsPlate.transform.position = new Vector3(0f, 4.08f, -3.55f);
+        controlsPlate.transform.localScale = new Vector3(5.55f, 0.38f, 0.08f);
         ApplyMaterial(controlsPlate, matPanel);
         Object.DestroyImmediate(controlsPlate.GetComponent<Collider>());
 
-        CreateWorldText("Controls", "LEFT CLICK  select / pinch     •     RIGHT-DRAG  look     •     WASD  move     •     R  reset", new Vector3(0f, 4.03f, -3.63f), 30, 0.036f, new Color(0.88f,0.89f,0.92f), TextAnchor.MiddleCenter, hud.transform, false);
+        CreateWorldText(
+            "Controls",
+            "LEFT CLICK  select / pinch   •   RIGHT-DRAG  look   •   WASD  move   •   R  reset",
+            new Vector3(0f, 4.09f, -3.63f),
+            25,
+            0.032f,
+            new Color(0.62f, 0.65f, 0.71f),
+            TextAnchor.MiddleCenter,
+            hud.transform,
+            false);
 
         GameObject statusPlate = GameObject.CreatePrimitive(PrimitiveType.Cube);
         statusPlate.name = "StatusPlate";
