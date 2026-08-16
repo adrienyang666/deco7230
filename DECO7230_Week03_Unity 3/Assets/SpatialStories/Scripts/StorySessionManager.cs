@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -29,6 +30,9 @@ public class StorySessionManager : MonoBehaviour
     [Header("Prototype Settings")]
     public string defaultStoryText = "Weekend";
 
+    [Header("Edit Transition")]
+    public float editToolsRevealDelay = 0.46f;
+
     [HideInInspector] public PhotoCard selectedPhoto;
     [HideInInspector] public PhotoCard editingPhoto;
     [HideInInspector] public OverlayItem selectedOverlay;
@@ -40,6 +44,7 @@ public class StorySessionManager : MonoBehaviour
     private int stickerAdds;
     private int deletes;
     private int photoSelections;
+    private Coroutine editTransitionRoutine;
 
     private void Awake()
     {
@@ -90,17 +95,80 @@ public class StorySessionManager : MonoBehaviour
 
     private void EnterEditMode(PhotoCard photo)
     {
+        if (editTransitionRoutine != null)
+            StopCoroutine(editTransitionRoutine);
+
+        editTransitionRoutine = StartCoroutine(EnterEditModeRoutine(photo));
+    }
+
+    private IEnumerator EnterEditModeRoutine(PhotoCard photo)
+    {
         editingPhoto = photo;
         selectedPhoto = photo;
         selectedOverlay = null;
         hasEdited = false;
-        photo.MoveToEditAnchor(editAnchor);
-        SetActiveSafe(toolsRoot, true);
-        SetActiveSafe(trashRoot, true);
+
+        SetAlbumDimmed(true, photo);
+        SetAlbumCaptionsVisible(false);
+        SetActiveSafe(toolsRoot, false);
+        SetActiveSafe(trashRoot, false);
         SetActiveSafe(publishRoot, false);
         SetActiveSafe(stickerPaletteRoot, false);
-        SetStatus("Edit mode: use T for text or S for stickers.");
+
+        SetStatus("Bringing your photo into the editing space...");
+        photo.MoveToEditAnchor(editAnchor);
         LogEvent("enter_edit", photo.photoId);
+
+        yield return new WaitForSeconds(editToolsRevealDelay);
+
+        SetActiveSafe(toolsRoot, true);
+        SetActiveSafe(trashRoot, true);
+        SetStatus("Edit mode: use T for text or S for stickers.");
+
+        editTransitionRoutine = null;
+    }
+
+    private void SetAlbumDimmed(bool dimmed, PhotoCard focusPhoto = null)
+    {
+        foreach (PhotoCard card in photoCards)
+        {
+            if (card == null)
+                continue;
+
+            bool shouldDim = dimmed && card != focusPhoto;
+            card.SetDimmed(shouldDim);
+        }
+    }
+
+    private void SetAlbumCaptionsVisible(bool visible)
+    {
+        // Hide the full browsing chrome during editing, not just the captions.
+        // This avoids 3D TextMesh objects rendering over the foreground photo.
+        foreach (PhotoCard card in photoCards)
+        {
+            if (card == null)
+                continue;
+
+            card.SetBrowseCaptionVisible(visible);
+        }
+
+        GameObject photoWall = GameObject.Find("PhotoWall");
+        if (photoWall == null)
+            return;
+
+        SetNamedChildActive(photoWall.transform, "Title", visible);
+        SetNamedChildActive(photoWall.transform, "Subtitle", visible);
+        SetNamedChildActive(photoWall.transform, "BrowseHint", visible);
+    }
+
+    private static void SetNamedChildActive(Transform parent, string childName, bool active)
+    {
+        if (parent == null)
+            return;
+
+        Transform child = parent.Find(childName);
+        if (child != null)
+            child.gameObject.SetActive(active);
     }
 
     public void AddTextOverlay()
@@ -234,6 +302,7 @@ public class StorySessionManager : MonoBehaviour
         }
 
         editingPhoto.MoveToPublishAnchor(publishAnchor);
+        SetAlbumDimmed(false);
         SetActiveSafe(toolsRoot, false);
         SetActiveSafe(stickerPaletteRoot, false);
         SetActiveSafe(trashRoot, false);
@@ -249,6 +318,15 @@ public class StorySessionManager : MonoBehaviour
 
     public void ResetPrototype()
     {
+        if (editTransitionRoutine != null)
+        {
+            StopCoroutine(editTransitionRoutine);
+            editTransitionRoutine = null;
+        }
+
+        SetAlbumDimmed(false);
+        SetAlbumCaptionsVisible(true);
+
         foreach (PhotoCard card in photoCards)
         {
             card.ClearOverlays();
