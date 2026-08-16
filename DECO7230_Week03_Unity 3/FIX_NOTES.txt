@@ -1,0 +1,17 @@
+Spatial Stories IP1 — Unity 6000.3.20f1 FIX
+
+Fixed:
+1. Assets/Editor/Week3SceneBuilder.cs
+   Replaced obsolete TextMeshProUGUI.CreateTextMeshProObject() call with
+   a normal GameObject + AddComponent<TextMeshProUGUI>().
+
+2. Assets/Editor/SpatialStoriesIP1Builder.cs
+   - Removed assignment to Scene.name.
+   - Added automatic creation of SpatialStories/Scenes and Materials folders.
+
+3. ProjectSettings/ProjectVersion.txt
+   Locked to the required Unity version: 6000.3.20f1.
+
+Open with Unity 6000.3.20f1.
+If Safe Mode opens after replacing an older copy, let Unity finish recompiling.
+Then choose Exit Safe Mode when the Console shows 0 red errors.

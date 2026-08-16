@@ -1,0 +1,2 @@
+using UnityEngine;
+public class DebugRotator : MonoBehaviour { public float rotationSpeed=45f; public float currentRotation=0f; public Vector3 objectPosition; public string objectName; public bool isRotating=true; void Start(){objectPosition=transform.position; objectName=gameObject.name;} void Update(){objectPosition=transform.position;if(isRotating){currentRotation+=rotationSpeed*Time.deltaTime;transform.rotation=Quaternion.Euler(0,currentRotation,0);}} }

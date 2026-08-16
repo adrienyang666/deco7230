@@ -1,0 +1,2 @@
+This project is configured for Unity 6000.3.20f1 (Unity 6.3 LTS), matching the course-required/local installed editor version.
+Open the DECO7230_Week03_Unity folder from Unity Hub using 6000.3.20f1.
