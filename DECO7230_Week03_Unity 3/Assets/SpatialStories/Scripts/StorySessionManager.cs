@@ -36,6 +36,10 @@ public class StorySessionManager : MonoBehaviour
     [Header("Overlay Manipulation")]
     public float overlayRotateSpeed = 90f;
 
+    [Header("Publish Transition")]
+    public float publishButtonHold = 0.14f;
+    public float publishPhotoTravelTime = 0.48f;
+
     [HideInInspector] public PhotoCard selectedPhoto;
     [HideInInspector] public PhotoCard editingPhoto;
     [HideInInspector] public OverlayItem selectedOverlay;
@@ -48,6 +52,8 @@ public class StorySessionManager : MonoBehaviour
     private int deletes;
     private int photoSelections;
     private Coroutine editTransitionRoutine;
+    private Coroutine publishTransitionRoutine;
+    private bool publishInProgress;
 
     private void Awake()
     {
@@ -342,25 +348,68 @@ public class StorySessionManager : MonoBehaviour
 
     public void PublishStory()
     {
+        if (publishInProgress)
+            return;
+
         if (editingPhoto == null || !hasEdited)
         {
             SetStatus("Add at least one edit before publishing.");
             return;
         }
 
-        editingPhoto.MoveToPublishAnchor(publishAnchor);
-        SetAlbumDimmed(false);
+        if (publishTransitionRoutine != null)
+            StopCoroutine(publishTransitionRoutine);
+
+        publishTransitionRoutine = StartCoroutine(PublishStoryRoutine());
+    }
+
+    private IEnumerator PublishStoryRoutine()
+    {
+        publishInProgress = true;
+
+        if (selectedOverlay != null)
+        {
+            selectedOverlay.SetSelected(false);
+            selectedOverlay = null;
+        }
+
+        SetStatus("Publishing your Story...");
+        LogEvent("publish_start", editingPhoto.photoId);
+
         SetActiveSafe(toolsRoot, false);
         SetActiveSafe(stickerPaletteRoot, false);
         SetActiveSafe(trashRoot, false);
+
+        // Keep the background album visually quiet while the chosen photo
+        // travels into the final "Your Story" position.
+        SetAlbumDimmed(true, editingPhoto);
+        SetAlbumCaptionsVisible(false);
+
+        editingPhoto.MoveToPublishAnchor(publishAnchor);
+
+        // Leave the red button visible for a fraction of a second so its
+        // press animation is actually perceived before it disappears.
+        yield return new WaitForSeconds(publishButtonHold);
         SetActiveSafe(publishRoot, false);
+
+        float remainingTravel =
+            Mathf.Max(0f, publishPhotoTravelTime - publishButtonHold);
+
+        if (remainingTravel > 0f)
+            yield return new WaitForSeconds(remainingTravel);
+
         SetActiveSafe(successRoot, true);
         SetActiveSafe(resetRoot, true);
+
         if (successText != null)
             successText.text = "Story Published  ✓\n" + editingPhoto.photoId;
-        SetStatus("Published. Press R or select RESET for the next participant.");
-        LogEvent("publish", editingPhoto.photoId);
+
+        SetStatus("Published — your Story is ready. Press R or select RESET for the next participant.");
+        LogEvent("publish_complete", editingPhoto.photoId);
         SaveSessionRow();
+
+        publishInProgress = false;
+        publishTransitionRoutine = null;
     }
 
     public void ResetPrototype()
@@ -370,6 +419,14 @@ public class StorySessionManager : MonoBehaviour
             StopCoroutine(editTransitionRoutine);
             editTransitionRoutine = null;
         }
+
+        if (publishTransitionRoutine != null)
+        {
+            StopCoroutine(publishTransitionRoutine);
+            publishTransitionRoutine = null;
+        }
+
+        publishInProgress = false;
 
         SetAlbumDimmed(false);
         SetAlbumCaptionsVisible(true);
