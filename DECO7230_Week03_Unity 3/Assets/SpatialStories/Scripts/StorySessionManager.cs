@@ -149,7 +149,7 @@ public class StorySessionManager : MonoBehaviour
 
         SetActiveSafe(toolsRoot, true);
         SetActiveSafe(trashRoot, true);
-        SetStatus("Edit mode: use T for text or S for stickers.");
+        SetStatus("Edit mode: T / S to add • drag overlays to move • drag to TRASH to delete.");
 
         editTransitionRoutine = null;
     }
@@ -302,16 +302,34 @@ public class StorySessionManager : MonoBehaviour
     {
         if (selectedOverlay == null)
         {
-            SetStatus("Select a text or sticker first, then use the trash bin.");
+            SetStatus("Drag text or a sticker onto the trash bin to delete it.");
             return;
         }
 
-        OverlayItem doomed = selectedOverlay;
-        selectedOverlay = null;
-        Destroy(doomed.gameObject);
+        DeleteOverlay(selectedOverlay, false);
+    }
+
+    public void DeleteOverlay(OverlayItem item, bool draggedToTrash)
+    {
+        if (item == null)
+            return;
+
+        if (selectedOverlay == item)
+            selectedOverlay = null;
+
+        Destroy(item.gameObject);
         deletes++;
-        MarkEdited("delete_overlay");
-        SetStatus("Overlay removed.");
+
+        string eventName = draggedToTrash
+            ? "drag_overlay_to_trash"
+            : "delete_overlay";
+
+        MarkEdited(eventName);
+
+        SetStatus(
+            draggedToTrash
+                ? "Removed — drag another item to the trash whenever you want to delete it."
+                : "Overlay removed.");
     }
 
     public void MarkEdited(string eventName, bool logEvent = true)
@@ -422,45 +440,42 @@ public class StorySessionManager : MonoBehaviour
     private float ReadScrollSteps()
     {
 #if ENABLE_INPUT_SYSTEM
-        if (Mouse.current != null)
-        {
-            float y = Mouse.current.scroll.ReadValue().y;
-            if (Mathf.Abs(y) > 0.01f)
-                return Mathf.Sign(y);
-        }
+        if (Mouse.current == null)
+            return 0f;
+
+        float y = Mouse.current.scroll.ReadValue().y;
+        return Mathf.Abs(y) > 0.01f ? Mathf.Sign(y) : 0f;
 #else
         float y = Input.mouseScrollDelta.y;
-        if (Mathf.Abs(y) > 0.01f)
-            return Mathf.Sign(y);
+        return Mathf.Abs(y) > 0.01f ? Mathf.Sign(y) : 0f;
 #endif
-        return 0f;
     }
 
     private float ReadOverlayRotationDirection()
     {
 #if ENABLE_INPUT_SYSTEM
-        if (Keyboard.current != null)
-        {
-            float direction = 0f;
-            if (Keyboard.current.zKey.isPressed) direction += 1f;
-            if (Keyboard.current.xKey.isPressed) direction -= 1f;
-            return direction;
-        }
+        if (Keyboard.current == null)
+            return 0f;
+
+        float direction = 0f;
+        if (Keyboard.current.zKey.isPressed) direction += 1f;
+        if (Keyboard.current.xKey.isPressed) direction -= 1f;
+        return direction;
 #else
         float direction = 0f;
         if (Input.GetKey(KeyCode.Z)) direction += 1f;
         if (Input.GetKey(KeyCode.X)) direction -= 1f;
         return direction;
 #endif
-        return 0f;
     }
 
     private bool ResetKeyPressed()
     {
 #if ENABLE_INPUT_SYSTEM
-        if (Keyboard.current != null)
-            return Keyboard.current.rKey.wasPressedThisFrame;
-#endif
+        return Keyboard.current != null &&
+               Keyboard.current.rKey.wasPressedThisFrame;
+#else
         return Input.GetKeyDown(KeyCode.R);
+#endif
     }
 }

@@ -12,6 +12,7 @@ public class SpatialInteractor : MonoBehaviour
 
     private InteractiveObject hoveredObject;
     private OverlayItem draggedOverlay;
+    private TrashBin activeTrashTarget;
 
     private void Awake()
     {
@@ -40,18 +41,25 @@ public class SpatialInteractor : MonoBehaviour
         }
 
         if (draggedOverlay != null && LeftIsPressed())
+        {
             draggedOverlay.Drag(this);
+            UpdateTrashDropTarget();
+        }
 
         if (draggedOverlay != null && LeftReleasedThisFrame())
         {
-            draggedOverlay.EndDrag(this);
+            OverlayItem releasedOverlay = draggedOverlay;
             draggedOverlay = null;
+
+            releasedOverlay.EndDrag(this);
+            ClearTrashDropTarget();
         }
     }
 
     private void UpdateHover()
     {
         InteractiveObject current = null;
+
         if (TryGetPointerHit(out RaycastHit hit))
             current = hit.collider.GetComponentInParent<InteractiveObject>();
 
@@ -67,6 +75,37 @@ public class SpatialInteractor : MonoBehaviour
             hoveredObject.SetHovered(true);
     }
 
+    private void UpdateTrashDropTarget()
+    {
+        TrashBin nextTarget = null;
+        TryGetTrashUnderPointer(out nextTarget);
+
+        if (nextTarget == activeTrashTarget)
+            return;
+
+        if (activeTrashTarget != null)
+            activeTrashTarget.SetDropTarget(false);
+
+        activeTrashTarget = nextTarget;
+
+        if (activeTrashTarget != null)
+        {
+            activeTrashTarget.SetDropTarget(true);
+
+            if (StorySessionManager.Instance != null)
+                StorySessionManager.Instance.SetStatus(
+                    "Release to delete this text or sticker.");
+        }
+    }
+
+    private void ClearTrashDropTarget()
+    {
+        if (activeTrashTarget != null)
+            activeTrashTarget.SetDropTarget(false);
+
+        activeTrashTarget = null;
+    }
+
     public Ray GetPointerRay()
     {
         Vector2 pointer = PointerPosition();
@@ -75,42 +114,84 @@ public class SpatialInteractor : MonoBehaviour
 
     public bool TryGetPointerHit(out RaycastHit hit)
     {
-        return Physics.Raycast(GetPointerRay(), out hit, maxDistance, interactionMask, QueryTriggerInteraction.Ignore);
+        return Physics.Raycast(
+            GetPointerRay(),
+            out hit,
+            maxDistance,
+            interactionMask,
+            QueryTriggerInteraction.Ignore);
+    }
+
+    public bool TryGetTrashUnderPointer(out TrashBin trash)
+    {
+        trash = null;
+
+        RaycastHit[] hits = Physics.RaycastAll(
+            GetPointerRay(),
+            maxDistance,
+            interactionMask,
+            QueryTriggerInteraction.Ignore);
+
+        if (hits == null || hits.Length == 0)
+            return false;
+
+        System.Array.Sort(
+            hits,
+            (a, b) => a.distance.CompareTo(b.distance));
+
+        foreach (RaycastHit hit in hits)
+        {
+            TrashBin candidate =
+                hit.collider.GetComponentInParent<TrashBin>();
+
+            if (candidate != null)
+            {
+                trash = candidate;
+                return true;
+            }
+        }
+
+        return false;
     }
 
     private Vector2 PointerPosition()
     {
 #if ENABLE_INPUT_SYSTEM
-        if (Mouse.current != null)
-            return Mouse.current.position.ReadValue();
-#endif
+        return Mouse.current != null
+            ? Mouse.current.position.ReadValue()
+            : Vector2.zero;
+#else
         return Input.mousePosition;
+#endif
     }
 
     private bool LeftPressedThisFrame()
     {
 #if ENABLE_INPUT_SYSTEM
-        if (Mouse.current != null)
-            return Mouse.current.leftButton.wasPressedThisFrame;
-#endif
+        return Mouse.current != null &&
+               Mouse.current.leftButton.wasPressedThisFrame;
+#else
         return Input.GetMouseButtonDown(0);
+#endif
     }
 
     private bool LeftIsPressed()
     {
 #if ENABLE_INPUT_SYSTEM
-        if (Mouse.current != null)
-            return Mouse.current.leftButton.isPressed;
-#endif
+        return Mouse.current != null &&
+               Mouse.current.leftButton.isPressed;
+#else
         return Input.GetMouseButton(0);
+#endif
     }
 
     private bool LeftReleasedThisFrame()
     {
 #if ENABLE_INPUT_SYSTEM
-        if (Mouse.current != null)
-            return Mouse.current.leftButton.wasReleasedThisFrame;
-#endif
+        return Mouse.current != null &&
+               Mouse.current.leftButton.wasReleasedThisFrame;
+#else
         return Input.GetMouseButtonUp(0);
+#endif
     }
 }

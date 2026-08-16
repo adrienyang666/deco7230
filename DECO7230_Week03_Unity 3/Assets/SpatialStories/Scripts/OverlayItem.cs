@@ -78,6 +78,20 @@ public class OverlayItem : InteractiveObject
     {
         dragging = false;
 
+        // Releasing over the spatial trash bin deletes the dragged object.
+        // The pointer can reach the bin even though the overlay itself stays
+        // constrained to the photo editing plane.
+        if (interactor != null &&
+            interactor.TryGetTrashUnderPointer(out TrashBin trash))
+        {
+            trash.SetDropTarget(false);
+
+            if (StorySessionManager.Instance != null)
+                StorySessionManager.Instance.DeleteOverlay(this, true);
+
+            return;
+        }
+
         if (StorySessionManager.Instance != null)
             StorySessionManager.Instance.MarkEdited("move_overlay", true);
     }
