@@ -203,33 +203,44 @@ public static class SpatialStoriesIP1Builder
         CreateWorldText("Title", "SPATIAL STORIES", new Vector3(0f, 4.35f, -0.05f), 82, 0.070f, Color.white, TextAnchor.MiddleCenter, root.transform, true);
         CreateWorldText("Subtitle", "Instagram Story creation as spatial direct manipulation", new Vector3(0f, 3.86f, -0.06f), 36, 0.055f, new Color(0.78f,0.80f,0.84f), TextAnchor.MiddleCenter, root.transform, false);
 
+        // Iteration 01: move away from a flat 2D grid and make the album feel spatial.
+        // The outer cards sit slightly closer to the user and turn inward.
         Vector3[] positions =
         {
-            new Vector3(-2.15f, 2.70f, 0.04f),
-            new Vector3( 0.00f, 2.70f, 0.00f),
-            new Vector3( 2.15f, 2.70f, 0.04f),
-            new Vector3(-2.15f, 1.12f, 0.04f),
-            new Vector3( 0.00f, 1.12f, 0.00f),
-            new Vector3( 2.15f, 1.12f, 0.04f)
+            new Vector3(-2.20f, 2.70f, -0.18f),
+            new Vector3( 0.00f, 2.70f,  0.00f),
+            new Vector3( 2.20f, 2.70f, -0.18f),
+            new Vector3(-2.20f, 1.12f, -0.18f),
+            new Vector3( 0.00f, 1.12f,  0.00f),
+            new Vector3( 2.20f, 1.12f, -0.18f)
         };
 
-        string[] labels = { "Sunset", "Coast", "City", "Beach", "Mountain", "Night" };
+        float[] yawAngles = { 8f, 0f, -8f, 8f, 0f, -8f };
+
+        // Labels match the six travel photographs currently used in the album.
+        string[] labels = { "Ekka", "Auckland", "Piha", "Aurora", "Paris", "Shanghai" };
 
         for (int i = 0; i < 6; i++)
         {
-            PhotoCard card = CreatePhotoCard(i + 1, labels[i], positions[i], root.transform, photoMaterials[i]);
+            PhotoCard card = CreatePhotoCard(
+                i + 1,
+                labels[i],
+                positions[i],
+                yawAngles[i],
+                root.transform,
+                photoMaterials[i]);
             cards.Add(card);
         }
 
         CreateWorldText("BrowseHint", "A floating album wall — choose a memory to turn into a Story", new Vector3(0f, 0.06f, -0.05f), 30, 0.052f, new Color(0.66f,0.69f,0.74f), TextAnchor.MiddleCenter, root.transform, false);
     }
 
-    private static PhotoCard CreatePhotoCard(int index, string label, Vector3 position, Transform parent, Material photoMat)
+    private static PhotoCard CreatePhotoCard(int index, string label, Vector3 position, float yawAngle, Transform parent, Material photoMat)
     {
         GameObject root = new GameObject($"Photo_{index:00}_{label}");
         root.transform.SetParent(parent);
         root.transform.position = position;
-        root.transform.rotation = Quaternion.identity;
+        root.transform.rotation = Quaternion.Euler(0f, yawAngle, 0f);
 
         BoxCollider collider = root.AddComponent<BoxCollider>();
         collider.size = new Vector3(1.78f, 1.30f, 0.12f);
@@ -537,8 +548,20 @@ public static class SpatialStoriesIP1Builder
             mat = new Material(shader) { name = name };
             AssetDatabase.CreateAsset(mat, path);
         }
-        if (mat.HasProperty("_BaseMap")) mat.SetTexture("_BaseMap", texture);
-        if (mat.HasProperty("_MainTex")) mat.SetTexture("_MainTex", texture);
+        if (mat.HasProperty("_BaseMap"))
+        {
+            mat.SetTexture("_BaseMap", texture);
+            mat.SetTextureScale("_BaseMap", new Vector2(1f, -1f));
+            mat.SetTextureOffset("_BaseMap", new Vector2(0f, 1f));
+        }
+
+        if (mat.HasProperty("_MainTex"))
+        {
+            mat.SetTexture("_MainTex", texture);
+            mat.SetTextureScale("_MainTex", new Vector2(1f, -1f));
+            mat.SetTextureOffset("_MainTex", new Vector2(0f, 1f));
+        }
+
         if (mat.HasProperty("_BaseColor")) mat.SetColor("_BaseColor", Color.white);
         if (mat.HasProperty("_Color")) mat.SetColor("_Color", Color.white);
         EditorUtility.SetDirty(mat);
