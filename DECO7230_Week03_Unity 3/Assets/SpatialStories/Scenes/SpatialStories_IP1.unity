@@ -210,7 +210,7 @@ Transform:
   m_GameObject: {fileID: 516665}
   serializedVersion: 2
   m_LocalRotation: {x: 0.39709535, y: -0.19772743, z: 0.08803392, w: 0.89189076}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.071, y: 1.292, z: 1.617}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1441,6 +1441,15 @@ MonoBehaviour:
   hoverFrame: {fileID: 628585154}
   selectedFrame: {fileID: 1989527933}
   overlayRoot: {fileID: 869297430}
+  captionText: {fileID: 0}
+  hoverScaleMultiplier: 1.03
+  selectedScaleMultiplier: 1.06
+  selectedForwardOffset: 0.24
+  browseFeedbackDuration: 0.18
+  captionNormalColor: {r: 0.78, g: 0.8, b: 0.84, a: 1}
+  captionSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  dimmedPhotoColor: {r: 0.32, g: 0.34, b: 0.38, a: 1}
+  dimmedCaptionColor: {r: 0.34, g: 0.36, b: 0.4, a: 1}
   moveDuration: 0.45
   editScaleMultiplier: 1.85
   publishScaleMultiplier: 0.72
@@ -1714,6 +1723,15 @@ MonoBehaviour:
   hoverFrame: {fileID: 1493887680}
   selectedFrame: {fileID: 321230268}
   overlayRoot: {fileID: 2075574229}
+  captionText: {fileID: 0}
+  hoverScaleMultiplier: 1.03
+  selectedScaleMultiplier: 1.06
+  selectedForwardOffset: 0.24
+  browseFeedbackDuration: 0.18
+  captionNormalColor: {r: 0.78, g: 0.8, b: 0.84, a: 1}
+  captionSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  dimmedPhotoColor: {r: 0.32, g: 0.34, b: 0.38, a: 1}
+  dimmedCaptionColor: {r: 0.34, g: 0.36, b: 0.4, a: 1}
   moveDuration: 0.45
   editScaleMultiplier: 1.85
   publishScaleMultiplier: 0.72
@@ -1788,6 +1806,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PublishButton
   visual: {fileID: 405413711}
   hoverScale: 1.1
+  readyStartScale: 0.82
+  readyDuration: 0.22
+  pressScale: 0.92
+  pressDuration: 0.07
 --- !u!23 &405413713
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3149,7 +3171,7 @@ Transform:
   m_GameObject: {fileID: 638778411}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 3.5, z: -4.5}
+  m_LocalPosition: {x: -3.986, y: 6.108, z: -4.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4258,6 +4280,15 @@ MonoBehaviour:
   hoverFrame: {fileID: 1320184810}
   selectedFrame: {fileID: 810047000}
   overlayRoot: {fileID: 251562592}
+  captionText: {fileID: 0}
+  hoverScaleMultiplier: 1.03
+  selectedScaleMultiplier: 1.06
+  selectedForwardOffset: 0.24
+  browseFeedbackDuration: 0.18
+  captionNormalColor: {r: 0.78, g: 0.8, b: 0.84, a: 1}
+  captionSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  dimmedPhotoColor: {r: 0.32, g: 0.34, b: 0.38, a: 1}
+  dimmedCaptionColor: {r: 0.34, g: 0.36, b: 0.4, a: 1}
   moveDuration: 0.45
   editScaleMultiplier: 1.85
   publishScaleMultiplier: 0.72
@@ -5160,6 +5191,15 @@ MonoBehaviour:
   hoverFrame: {fileID: 233212177}
   selectedFrame: {fileID: 494787023}
   overlayRoot: {fileID: 766302330}
+  captionText: {fileID: 0}
+  hoverScaleMultiplier: 1.03
+  selectedScaleMultiplier: 1.06
+  selectedForwardOffset: 0.24
+  browseFeedbackDuration: 0.18
+  captionNormalColor: {r: 0.78, g: 0.8, b: 0.84, a: 1}
+  captionSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  dimmedPhotoColor: {r: 0.32, g: 0.34, b: 0.38, a: 1}
+  dimmedCaptionColor: {r: 0.34, g: 0.36, b: 0.4, a: 1}
   moveDuration: 0.45
   editScaleMultiplier: 1.85
   publishScaleMultiplier: 0.72
@@ -5239,6 +5279,15 @@ MonoBehaviour:
   hoverFrame: {fileID: 394047887}
   selectedFrame: {fileID: 1082570683}
   overlayRoot: {fileID: 1679260645}
+  captionText: {fileID: 0}
+  hoverScaleMultiplier: 1.03
+  selectedScaleMultiplier: 1.06
+  selectedForwardOffset: 0.24
+  browseFeedbackDuration: 0.18
+  captionNormalColor: {r: 0.78, g: 0.8, b: 0.84, a: 1}
+  captionSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  dimmedPhotoColor: {r: 0.32, g: 0.34, b: 0.38, a: 1}
+  dimmedCaptionColor: {r: 0.34, g: 0.36, b: 0.4, a: 1}
   moveDuration: 0.45
   editScaleMultiplier: 1.85
   publishScaleMultiplier: 0.72
@@ -5512,6 +5561,15 @@ MonoBehaviour:
   hoverFrame: {fileID: 286307014}
   selectedFrame: {fileID: 757508338}
   overlayRoot: {fileID: 328843162}
+  captionText: {fileID: 0}
+  hoverScaleMultiplier: 1.03
+  selectedScaleMultiplier: 1.06
+  selectedForwardOffset: 0.24
+  browseFeedbackDuration: 0.18
+  captionNormalColor: {r: 0.78, g: 0.8, b: 0.84, a: 1}
+  captionSelectedColor: {r: 1, g: 1, b: 1, a: 1}
+  dimmedPhotoColor: {r: 0.32, g: 0.34, b: 0.38, a: 1}
+  dimmedCaptionColor: {r: 0.34, g: 0.36, b: 0.4, a: 1}
   moveDuration: 0.45
   editScaleMultiplier: 1.85
   publishScaleMultiplier: 0.72
@@ -7130,6 +7188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrashBin
   visual: {fileID: 1663747776}
   hoverScale: 1.12
+  dropTargetScale: 1.28
 --- !u!23 &1663747778
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7385,6 +7444,10 @@ MonoBehaviour:
   overlaySelectionMaterial: {fileID: 2100000, guid: 8a42b1920b8eb455794f660759ec44ed, type: 2}
   darkPanelMaterial: {fileID: 2100000, guid: 4f81a50382cc34c51963223f4c532e8c, type: 2}
   defaultStoryText: Weekend
+  editToolsRevealDelay: 0.46
+  overlayRotateSpeed: 90
+  publishButtonHold: 0.14
+  publishPhotoTravelTime: 0.48
   selectedPhoto: {fileID: 0}
   editingPhoto: {fileID: 0}
   selectedOverlay: {fileID: 0}
