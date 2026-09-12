@@ -3288,6 +3288,8 @@ GameObject:
   - component: {fileID: 714804130}
   - component: {fileID: 714804132}
   - component: {fileID: 714804131}
+  - component: {fileID: 714804134}
+  - component: {fileID: 714804133}
   m_Layer: 0
   m_Name: PhotoSurface
   m_TagString: Untagged
@@ -3367,6 +3369,40 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 714804129}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &714804133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714804129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76ed9dc58a06a4a74ab12cf4d4542d4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonHandler
+  targetRotator: {fileID: 0}
+  toggleButton: {fileID: 0}
+--- !u!114 &714804134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 714804129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ce1ee550772d4921b41478a424e0e70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  rotationDisplay: {fileID: 0}
+  positionDisplay: {fileID: 0}
+  speedDisplay: {fileID: 0}
+  statusDisplay: {fileID: 0}
+  distanceDisplay: {fileID: 0}
+  angleDisplay: {fileID: 0}
+  targetRotator: {fileID: 0}
+  usefulMath: {fileID: 0}
 --- !u!1 &719842841
 GameObject:
   m_ObjectHideFlags: 0
