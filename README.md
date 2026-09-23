@@ -1,5 +1,15 @@
 # Instagram Story in Mixed Reality
 
+## IP2a — Week 9 testing preparation
+
+**[Open the Spatial Stories IP2a testing materials](Testing/IP2a/README.md)**: testing plan, IP1-to-IP2a design decisions, bilingual field guide, blank observation sheets, results template and AI use statement.
+
+The current test uses Quest 3S controllers and the full spatial photo-editing concept. Participant results are pending. The exact latest Unity project and demonstration video are also pending upload; see the [preparation status](Testing/IP2a/README.md#source-and-demonstration-status).
+
+The sections below preserve the original Week 2–3 MR concept and paper prototype as design history. For the current IP2a test scope and revised interactions, use the linked testing materials.
+
+---
+
 ## DECO2300/7230 Digital Prototyping and Extended Reality  
 **Design Concept – Week 2 to Week 3**
 
