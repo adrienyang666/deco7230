@@ -1,0 +1,11 @@
+{
+  "changed": [
+    "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs",
+    "Assets/SpatialStoriesImmersive/Editor/IP2bProjectTools.cs",
+    "Packages/manifest.json",
+    "Packages/packages-lock.json"
+  ],
+  "added": [],
+  "deleted": [],
+  "r4_sha256": "029b47e1efeb33649d49d25492347d783dc078414def4bd59a08e5b921877a3d"
+}

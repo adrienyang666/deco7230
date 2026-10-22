@@ -1,0 +1,17 @@
+{
+  "job_id": "build-d8f35d9a15",
+  "result": "succeeded",
+  "errors": 1,
+  "warnings": 340,
+  "duration_seconds": 144.742766,
+  "issues": [
+    "OpenXR MetaQuestFeature validation used selected Standalone despite active Android",
+    "Obsolete PVRTC texture compression",
+    "MCP command timeout warnings while Unity main thread was building"
+  ],
+  "correction": [
+    "Set selectedBuildTargetGroup Android",
+    "Set Android texture compression ASTC"
+  ],
+  "superseded": true
+}

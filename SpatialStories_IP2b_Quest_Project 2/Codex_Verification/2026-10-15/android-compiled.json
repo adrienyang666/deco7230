@@ -1,0 +1,28 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"target\":\"Android\",\"compiling\":false,\"scriptsFailed\":false,\"errors\":0,\"warnings\":14,\"logs\":1,\"sceneDirty\":false},\"compiler\":\"codedom\"}}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "target": "Android",
+        "compiling": false,
+        "scriptsFailed": false,
+        "errors": 0,
+        "warnings": 14,
+        "logs": 1,
+        "sceneDirty": false
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

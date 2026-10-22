@@ -1,0 +1,16 @@
+{
+  "name": "SpatialStories.Immersive.Tests",
+  "rootNamespace": "SpatialStories.Immersive.Tests",
+  "references": [
+    "SpatialStories.Immersive",
+    "Unity.XR.Interaction.Toolkit",
+    "Unity.ugui"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "autoReferenced": false
+}

@@ -1,0 +1,158 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Retrieved 20 log entries.\",\"data\":[{\"type\":\"Error\",\"message\":\"Call to StopSubsystems without an initialized manager.Please make sure wait for initialization to complete before calling this API.\",\"file\":\"./Library/PackageCache/com.unity.xr.management@e3a3882b360a/Runtime/XRManagerSettings.cs\",\"line\":423,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Log\",\"message\":\"[Spatial Stories Codex] Official Unity MCP stdio bridge configured.\",\"file\":\"Assets/SpatialStoriesImmersive/Editor/CodexBridgeBootstrap.cs\",\"line\":44,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"To avoid interfering with point and click interactions, XRUIInputModule mouse and touch input will be disabled while the simulated devices are active.\",\"file\":\"./Library/PackageCache/com.unity.xr.interaction.toolkit@c7557c6c9ee4/Runtime/Inputs/Simulation/XRInteractionSimulator.cs\",\"line\":2657,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Log\",\"message\":\"[IP2b startup r3] Scene=SpatialStories_IP2b_Simulator; Stage=Welcome; Camera world Y=1.650; Offset local Y=1.650; Content world Y=0.000; Welcome bottom Y=1.150. Fresh desktop startup should have camera Y about 1.650, content Y 0.000 and welcome bottom Y 1.150.\",\"file\":\"Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs\",\"line\":260,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":45,\"stackTrace\":null}]}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Retrieved 20 log entries.",
+    "data": [
+      {
+        "type": "Error",
+        "message": "Call to StopSubsystems without an initialized manager.Please make sure wait for initialization to complete before calling this API.",
+        "file": "./Library/PackageCache/com.unity.xr.management@e3a3882b360a/Runtime/XRManagerSettings.cs",
+        "line": 423,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Log",
+        "message": "[Spatial Stories Codex] Official Unity MCP stdio bridge configured.",
+        "file": "Assets/SpatialStoriesImmersive/Editor/CodexBridgeBootstrap.cs",
+        "line": 44,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "To avoid interfering with point and click interactions, XRUIInputModule mouse and touch input will be disabled while the simulated devices are active.",
+        "file": "./Library/PackageCache/com.unity.xr.interaction.toolkit@c7557c6c9ee4/Runtime/Inputs/Simulation/XRInteractionSimulator.cs",
+        "line": 2657,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Log",
+        "message": "[IP2b startup r3] Scene=SpatialStories_IP2b_Simulator; Stage=Welcome; Camera world Y=1.650; Offset local Y=1.650; Content world Y=0.000; Welcome bottom Y=1.150. Fresh desktop startup should have camera Y about 1.650, content Y 0.000 and welcome bottom Y 1.150.",
+        "file": "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs",
+        "line": 260,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "<b><color=#cc7a00>MCP-FOR-UNITY</color></b>: Port 6401 not released yet after reload; retrying same port.",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 45,
+        "stackTrace": null
+      }
+    ]
+  },
+  "isError": false
+}

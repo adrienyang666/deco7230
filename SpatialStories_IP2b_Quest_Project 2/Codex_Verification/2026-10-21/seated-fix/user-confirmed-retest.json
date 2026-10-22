@@ -1,0 +1,20 @@
+{
+  "date_local": "2026-10-21",
+  "timezone": "Australia/Brisbane",
+  "build": "1.3.2 / code 6",
+  "device_suffix": "04B2",
+  "type": "developer-user technical retest, not formal participant study",
+  "posture": "seated",
+  "verbatim_height_reply": "高度正常，照片不入地，能看到垃圾桶",
+  "verbatim_trigger_reply": "Trigger 有选中反馈",
+  "height_fix_retest": "passed by explicit user report",
+  "cutout_trigger_feedback_retest": "passed by explicit user report",
+  "remaining": [
+    "complete final-build task run including preview/publish",
+    "delete/undo",
+    "small pilot",
+    "formal participant study"
+  ],
+  "layer_usability_comment": "我想问这些layer的功能怎么用呀，看起来并不是很实用",
+  "layer_code_change_made": false
+}

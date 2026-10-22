@@ -1,0 +1,93 @@
+{
+  "syntax_files": 6,
+  "cross_script_contracts": "passed",
+  "keyboard_action_mapping": "passed",
+  "preserved_configuration_files": {
+    "ProjectSettings": 23,
+    "Packages": 2,
+    "Assets/XR": 10,
+    "Assets/XRI": 10,
+    "Assets/Samples": 510
+  },
+  "photos": [
+    {
+      "file": "Photo_01.png",
+      "pixels": [
+        1152,
+        2048
+      ],
+      "fitted_metres": [
+        0.40499999999999997,
+        0.72
+      ]
+    },
+    {
+      "file": "Photo_02.png",
+      "pixels": [
+        1152,
+        2048
+      ],
+      "fitted_metres": [
+        0.40499999999999997,
+        0.72
+      ]
+    },
+    {
+      "file": "Photo_03.png",
+      "pixels": [
+        1152,
+        2048
+      ],
+      "fitted_metres": [
+        0.40499999999999997,
+        0.72
+      ]
+    },
+    {
+      "file": "Photo_04.png",
+      "pixels": [
+        1152,
+        2048
+      ],
+      "fitted_metres": [
+        0.40499999999999997,
+        0.72
+      ]
+    },
+    {
+      "file": "Photo_05.png",
+      "pixels": [
+        1152,
+        2048
+      ],
+      "fitted_metres": [
+        0.40499999999999997,
+        0.72
+      ]
+    },
+    {
+      "file": "Photo_06.png",
+      "pixels": [
+        1152,
+        2048
+      ],
+      "fitted_metres": [
+        0.40499999999999997,
+        0.72
+      ]
+    }
+  ],
+  "unity_import": "NOT RUN",
+  "unity_compile": "NOT RUN",
+  "scene_generation": "NOT RUN",
+  "play_mode": "NOT RUN",
+  "quest_hardware": "NOT RUN",
+  "compile_fix_2026_09_15": {
+    "issue": "CS0619 at CancelInteractableSelection",
+    "fix": "Explicit IXRSelectInteractable overload",
+    "api_source_check": "passed (XRI 3.6 current + deprecated overloads inspected)",
+    "syntax_files_rechecked": 6,
+    "dependency_requirement": "Enable com.unity.modules.video 1.0.0 in existing project",
+    "unity_compile": "NOT RUN"
+  }
+}

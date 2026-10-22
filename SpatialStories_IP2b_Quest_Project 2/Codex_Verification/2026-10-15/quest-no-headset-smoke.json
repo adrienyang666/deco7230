@@ -1,0 +1,32 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"scene\":\"SpatialStories_IP2b_Quest\",\"stage\":\"Welcome\",\"pending\":true,\"beginAllowed\":false,\"beforeY\":0.0,\"afterY\":0.0,\"cameraY\":0.0,\"hint\":\"Still waiting for tracking.\\nKeep your headset on and check your play area.\",\"buttons\":[false]},\"compiler\":\"codedom\"}}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "scene": "SpatialStories_IP2b_Quest",
+        "stage": "Welcome",
+        "pending": true,
+        "beginAllowed": false,
+        "beforeY": 0.0,
+        "afterY": 0.0,
+        "cameraY": 0.0,
+        "hint": "Still waiting for tracking.\nKeep your headset on and check your play area.",
+        "buttons": [
+          false
+        ]
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

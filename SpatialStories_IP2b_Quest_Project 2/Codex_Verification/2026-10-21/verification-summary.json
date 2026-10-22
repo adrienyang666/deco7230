@@ -1,0 +1,24 @@
+{
+  "version": "1.3.1",
+  "apk_bytes": 47770300,
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 2,
+    "bytes": 778616365,
+    "apk": "/Users/yangzixu/Documents/GitHub/deco7230/SpatialStories_IP2b_Quest_Project 2/Assets/../Builds/SpatialStories_IP2b_1.3.1_Glow.apk",
+    "version": "1.3.1",
+    "durationSeconds": 117.667411
+  },
+  "apk_sha256": "f1dbc31d154e2122ac34586d9b96bd33685e2f9110c2c9269f5230599ac30c42",
+  "main_sha256": "57c45f6a2a9ea3dac23e340a57b6c7435b0cfa5b79657bb24be59aee2ab90984",
+  "editmode": {
+    "passed": 20,
+    "failed": 0,
+    "job": "05132259781e4a52b3f0db92623c80a3"
+  },
+  "simulator_session": "20261021_034444_356",
+  "automated_only": true,
+  "quest_status": "USB unauthorized; not installed or tested",
+  "participant_results_added": false
+}

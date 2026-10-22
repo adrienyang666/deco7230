@@ -1,0 +1,23 @@
+# ninja log v5
+0	843	1792557219978584425	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8f769517da92619f
+1	813	1792557219948807495	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ef0d9e585227baa2
+2	736	1792557219871939441	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c22f776417cf3f62
+1	725	1792557219860895493	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	23d432587b93c46a
+2	695	1792557219829018023	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	fa993fba3b6a6894
+843	874	1792557220009813022	/Users/yangzixu/Documents/GitHub/deco7230/SpatialStories_IP2b_Quest_Project 2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1z2v3x6z/obj/arm64-v8a/libgame.so	83e10eec64a6b5c3
+1	663	1792557219797216386	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	dbf90e49359cd576
+1	695	1792557219829286606	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c297b902f97b5db0
+1	693	1792557219827292025	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	49f6e5d42544d64d
+177	274	1792557219386714434	/Users/yangzixu/Documents/GitHub/deco7230/SpatialStories_IP2b_Quest_Project 2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1z2v3x6z/obj/arm64-v8a/libswappywrapper.so	d7e2c55d3e1fb0d6
+2	176	1792557219309180631	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	bfded510a4a4b1d5
+4	94	1792558319117435451	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	bfded510a4a4b1d5
+97	177	1792558319177805795	/Users/yangzixu/Documents/GitHub/deco7230/SpatialStories_IP2b_Quest_Project 2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1z2v3x6z/obj/arm64-v8a/libswappywrapper.so	d7e2c55d3e1fb0d6
+2	469	1792558319491827059	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	49f6e5d42544d64d
+2	483	1792558319503030852	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c297b902f97b5db0
+3	483	1792558319506323811	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	dbf90e49359cd576
+3	491	1792558319512716312	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	fa993fba3b6a6894
+3	510	1792558319533559483	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	c22f776417cf3f62
+2	512	1792558319535069525	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	23d432587b93c46a
+3	600	1792558319622519623	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	ef0d9e585227baa2
+2	625	1792558319647619503	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	8f769517da92619f
+625	654	1792558319677384383	/Users/yangzixu/Documents/GitHub/deco7230/SpatialStories_IP2b_Quest_Project 2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/1z2v3x6z/obj/arm64-v8a/libgame.so	83e10eec64a6b5c3

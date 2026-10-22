@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "message": "Code executed successfully.",
+  "data": {
+    "result": {
+      "project": "/Users/yangzixu/Downloads/SpatialStories_IP2b_Quest_Project 2/Assets",
+      "active": "Android",
+      "selected": "Android",
+      "compression": "ASTC",
+      "compiling": false,
+      "failed": false,
+      "playing": false,
+      "building": false,
+      "scene": "Assets/SpatialStoriesImmersive/Scenes/SpatialStories_IP2b_Quest.unity",
+      "dirty": false,
+      "console": {
+        "errors": 0,
+        "warnings": 2,
+        "logs": 2
+      }
+    },
+    "compiler": "codedom"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "apk_bytes": 47770300,
+  "sha256": "f1dbc31d154e2122ac34586d9b96bd33685e2f9110c2c9269f5230599ac30c42",
+  "badging": [
+    "package: name='com.zixuyang.spatialstories.ip2b' versionCode='5' versionName='1.3.1' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+    "sdkVersion:'32'",
+    "targetSdkVersion:'36'",
+    "launchable-activity: name='com.unity3d.player.UnityPlayerGameActivity'  label='' icon=''",
+    "native-code: 'arm64-v8a'"
+  ],
+  "signature_verified": true,
+  "signature_details": [
+    "Verifies",
+    "Verified using v1 scheme (JAR signing): false",
+    "Verified using v2 scheme (APK Signature Scheme v2): true",
+    "Verified using v3 scheme (APK Signature Scheme v3): false",
+    "Verified using v3.1 scheme (APK Signature Scheme v3.1): false",
+    "Verified using v4 scheme (APK Signature Scheme v4): false",
+    "Verified for SourceStamp: false",
+    "Number of signers: 1",
+    "Signer #1 certificate DN: C=US, O=Android, CN=Android Debug",
+    "Signer #1 certificate SHA-256 digest: 504224fb246bad412ed7cd6cdac25ffb1a2734c8148e74016d9429de1ed76adf",
+    "Signer #1 certificate SHA-1 digest: ebba71ef634d0d696093f433e729edc9f4694044",
+    "Signer #1 certificate MD5 digest: 0703476d1ce6ac9269d217e9ebb70d4a",
+    "Signer #1 key algorithm: RSA",
+    "Signer #1 key size (bits): 2048",
+    "Signer #1 public key SHA-256 digest: 2499581656feebcb856a64b9dcdcdf9442ce0cdf33b7baa98caac4f920c291db",
+    "Signer #1 public key SHA-1 digest: dec4147b9f0e501232121ab6b0256239f34c2d37",
+    "Signer #1 public key MD5 digest: 92f57baef3bf6e396b6949fcb8fc206a"
+  ],
+  "native_library_count": 10
+}

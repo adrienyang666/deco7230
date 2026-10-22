@@ -1,0 +1,27 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"recenterKept\":true,\"recenterHint\":\"Tracking is not ready.\\nKeep your headset on and try again.\",\"resetStage\":\"Welcome\",\"resetBeginAllowed\":false,\"resetHint\":\"Put on your headset and look ahead.\\nWaiting for tracking...\",\"resetPending\":true},\"compiler\":\"codedom\"}}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "recenterKept": true,
+        "recenterHint": "Tracking is not ready.\nKeep your headset on and try again.",
+        "resetStage": "Welcome",
+        "resetBeginAllowed": false,
+        "resetHint": "Put on your headset and look ahead.\nWaiting for tracking...",
+        "resetPending": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

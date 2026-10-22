@@ -1,0 +1,12 @@
+{
+  "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs": "fd7f3a7289987a1fcff4c673c6ed2832aeb77661c1b04401ed3fcfc89ceb4981",
+  "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.Collage.cs": "01f1a99f9889154170e2ea55086f59decd891e2be7d59a34c14d43fa5728db45",
+  "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.CutoutSelection.cs": "69de0cd4d39e24d51c3954a980bb5609d1f8b884e5c2246adb6ce54a42c2e37f",
+  "Assets/SpatialStoriesImmersive/Runtime/SpatialToolButton.cs": "c01b81e69edf141b30265bfb878506c3842ff7b234c2bcfd5dad345522e7df3a",
+  "Assets/SpatialStoriesImmersive/Tests/Editor/SpatialStoriesSeatedLayoutTests.cs": "50fba60a14f3fcae915cab5c9a4c732263c56563d390fc25f25680f16776c24a",
+  "Assets/SpatialStoriesImmersive/Tests/Editor/CutoutSelectionTests.cs": "f903c158fcf9de873930f9f5bd19de8fe2986b96e024238534b641a68203cea1",
+  "Assets/SpatialStoriesImmersive/Tests/Editor/SpatialStories.Immersive.Tests.asmdef": "284e88eed073c1f5fc44fa08017df9464b2f455cbb7504e8e177c6a7f74c0e27",
+  "Assets/SpatialStoriesImmersive/Scenes/SpatialStories_IP2b_Quest.unity": "805ce704373e73917d6c871f3d646d1e07022df1539129a972f445656257b708",
+  "Assets/SpatialStoriesImmersive/Scenes/SpatialStories_IP2b_Simulator.unity": "1f2264e40bce35f06f010c930455a87da359a56399752b6d54dfcffc15808f47",
+  "ProjectSettings/ProjectSettings.asset": "3ea1d0095062fd185832816987f54bee6b7d803f69e67e9653e7b2fa9e499da9"
+}

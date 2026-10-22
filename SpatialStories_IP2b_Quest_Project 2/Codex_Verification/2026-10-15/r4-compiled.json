@@ -1,0 +1,23 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"r4\":true,\"pipeline\":\"Built-in\"},\"compiler\":\"codedom\"}}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "r4": true,
+        "pipeline": "Built-in"
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

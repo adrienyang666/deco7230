@@ -1,0 +1,46 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Retrieved 4 log entries.\",\"data\":[{\"type\":\"Error\",\"message\":\"Call to StopSubsystems without an initialized manager.Please make sure wait for initialization to complete before calling this API.\",\"file\":\"./Library/PackageCache/com.unity.xr.management@e3a3882b360a/Runtime/XRManagerSettings.cs\",\"line\":423,\"stackTrace\":null},{\"type\":\"Log\",\"message\":\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [StartupConfigRewrite] refreshed 1 client config(s).\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":40,\"stackTrace\":null},{\"type\":\"Log\",\"message\":\"<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: StdioBridgeHost started on port 6400. (OS=OSXEditor, server=10.0.0)\",\"file\":\"./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs\",\"line\":40,\"stackTrace\":null},{\"type\":\"Log\",\"message\":\"[Spatial Stories Codex] Official Unity MCP stdio bridge configured.\",\"file\":\"Assets/SpatialStoriesImmersive/Editor/CodexBridgeBootstrap.cs\",\"line\":44,\"stackTrace\":null}]}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Retrieved 4 log entries.",
+    "data": [
+      {
+        "type": "Error",
+        "message": "Call to StopSubsystems without an initialized manager.Please make sure wait for initialization to complete before calling this API.",
+        "file": "./Library/PackageCache/com.unity.xr.management@e3a3882b360a/Runtime/XRManagerSettings.cs",
+        "line": 423,
+        "stackTrace": null
+      },
+      {
+        "type": "Log",
+        "message": "<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: [StartupConfigRewrite] refreshed 1 client config(s).",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 40,
+        "stackTrace": null
+      },
+      {
+        "type": "Log",
+        "message": "<b><color=#2EA3FF>MCP-FOR-UNITY</color></b>: StdioBridgeHost started on port 6400. (OS=OSXEditor, server=10.0.0)",
+        "file": "./Library/PackageCache/com.coplaydev.unity-mcp@7b7db7b31f4e/Editor/Helpers/McpLog.cs",
+        "line": 40,
+        "stackTrace": null
+      },
+      {
+        "type": "Log",
+        "message": "[Spatial Stories Codex] Official Unity MCP stdio bridge configured.",
+        "file": "Assets/SpatialStoriesImmersive/Editor/CodexBridgeBootstrap.cs",
+        "line": 44,
+        "stackTrace": null
+      }
+    ]
+  },
+  "isError": false
+}

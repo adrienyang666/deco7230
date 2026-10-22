@@ -1,0 +1,30 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":{\"scene\":\"SpatialStories_IP2b_Simulator\",\"before\":\"Welcome\",\"after\":\"Browse\",\"beginAllowed\":true,\"cameraY\":1.65,\"contentY\":0.0,\"photos\":6,\"cutoutDiscovery\":true,\"placementFeedback\":true},\"compiler\":\"codedom\"}}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": {
+        "scene": "SpatialStories_IP2b_Simulator",
+        "before": "Welcome",
+        "after": "Browse",
+        "beginAllowed": true,
+        "cameraY": 1.65,
+        "contentY": 0.0,
+        "photos": 6,
+        "cutoutDiscovery": true,
+        "placementFeedback": true
+      },
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

@@ -1,0 +1,24 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Retrieved active scene information.\",\"data\":{\"name\":\"SpatialStories_IP2b_Quest\",\"path\":\"Assets/SpatialStoriesImmersive/Scenes/SpatialStories_IP2b_Quest.unity\",\"buildIndex\":0,\"isDirty\":false,\"isLoaded\":true,\"rootCount\":3}}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Retrieved active scene information.",
+    "data": {
+      "name": "SpatialStories_IP2b_Quest",
+      "path": "Assets/SpatialStoriesImmersive/Scenes/SpatialStories_IP2b_Quest.unity",
+      "buildIndex": 0,
+      "isDirty": false,
+      "isLoaded": true,
+      "rootCount": 3
+    }
+  },
+  "isError": false
+}

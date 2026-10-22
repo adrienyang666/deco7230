@@ -1,0 +1,32 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Retrieved 2 log entries.\",\"data\":[{\"type\":\"Log\",\"message\":\"[IP2b Quest startup r4] Waiting for a tracked headset. For mouse/keyboard testing use Tools > Spatial Stories IP2b > 2 - Open Simulator scene.\",\"file\":\"Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs\",\"line\":116,\"stackTrace\":null},{\"type\":\"Warning\",\"message\":\"[IP2b Quest startup r4] Still waiting for a tracked Floor-mode headset and an updated camera pose. No alignment has been applied; retrying automatically. No valid Head device.\",\"file\":\"Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs\",\"line\":149,\"stackTrace\":null}]}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Retrieved 2 log entries.",
+    "data": [
+      {
+        "type": "Log",
+        "message": "[IP2b Quest startup r4] Waiting for a tracked headset. For mouse/keyboard testing use Tools > Spatial Stories IP2b > 2 - Open Simulator scene.",
+        "file": "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs",
+        "line": 116,
+        "stackTrace": null
+      },
+      {
+        "type": "Warning",
+        "message": "[IP2b Quest startup r4] Still waiting for a tracked Floor-mode headset and an updated camera pose. No alignment has been applied; retrying automatically. No valid Head device.",
+        "file": "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs",
+        "line": 149,
+        "stackTrace": null
+      }
+    ]
+  },
+  "isError": false
+}

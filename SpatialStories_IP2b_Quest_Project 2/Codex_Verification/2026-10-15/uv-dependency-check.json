@@ -1,0 +1,20 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Code executed successfully.\",\"data\":{\"result\":\"{\\\"Dependencies\\\":[{\\\"Name\\\":\\\"Python\\\",\\\"IsAvailable\\\":true,\\\"Version\\\":\\\"3.13.12\\\",\\\"Path\\\":\\\"/usr/local/bin/python3\\\",\\\"Details\\\":\\\"Found Python 3.13.12 at /usr/local/bin/python3\\\",\\\"ErrorMessage\\\":null,\\\"IsRequired\\\":true,\\\"InstallationHint\\\":\\\"https://www.python.org/downloads/macos/\\\"},{\\\"Name\\\":\\\"uv Package Manager\\\",\\\"IsAvailable\\\":true,\\\"Version\\\":\\\"0.13.1\\\",\\\"Path\\\":\\\"/Users/yangzixu/Documents/Codex/Tools/unity-mcp-10.0.0/bin/uv\\\",\\\"Details\\\":\\\"Found uv 0.13.1 (override path)\\\",\\\"ErrorMessage\\\":null,\\\"IsRequired\\\":true,\\\"InstallationHint\\\":\\\"https://docs.astral.sh/uv/getting-started/installation/#macos\\\"}],\\\"IsSystemReady\\\":true,\\\"AllRequiredAvailable\\\":true,\\\"HasMissingOptional\\\":false,\\\"Summary\\\":\\\"All dependencies are available and ready.\\\",\\\"RecommendedActions\\\":[\\\"All dependencies are available. You can start using MCP for Unity.\\\"],\\\"CheckedAt\\\":\\\"2026-10-15T11:34:42.120561Z\\\"}\",\"compiler\":\"codedom\"}}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Code executed successfully.",
+    "data": {
+      "result": "{\"Dependencies\":[{\"Name\":\"Python\",\"IsAvailable\":true,\"Version\":\"3.13.12\",\"Path\":\"/usr/local/bin/python3\",\"Details\":\"Found Python 3.13.12 at /usr/local/bin/python3\",\"ErrorMessage\":null,\"IsRequired\":true,\"InstallationHint\":\"https://www.python.org/downloads/macos/\"},{\"Name\":\"uv Package Manager\",\"IsAvailable\":true,\"Version\":\"0.13.1\",\"Path\":\"/Users/yangzixu/Documents/Codex/Tools/unity-mcp-10.0.0/bin/uv\",\"Details\":\"Found uv 0.13.1 (override path)\",\"ErrorMessage\":null,\"IsRequired\":true,\"InstallationHint\":\"https://docs.astral.sh/uv/getting-started/installation/#macos\"}],\"IsSystemReady\":true,\"AllRequiredAvailable\":true,\"HasMissingOptional\":false,\"Summary\":\"All dependencies are available and ready.\",\"RecommendedActions\":[\"All dependencies are available. You can start using MCP for Unity.\"],\"CheckedAt\":\"2026-10-15T11:34:42.120561Z\"}",
+      "compiler": "codedom"
+    }
+  },
+  "isError": false
+}

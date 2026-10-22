@@ -1,0 +1,32 @@
+{
+  "meta": null,
+  "content": [
+    {
+      "type": "text",
+      "text": "{\"success\":true,\"message\":\"Retrieved 2 log entries.\",\"data\":[{\"type\":\"Log\",\"message\":\"IP2b asset/scene checks passed. Run EditMode tests and the Quest checklist in IP2b_START_HERE.md before the participant session.\",\"file\":\"Assets/SpatialStoriesImmersive/Editor/IP2bProjectTools.cs\",\"line\":31,\"stackTrace\":null},{\"type\":\"Exception\",\"message\":\"Saving results to: /Users/yangzixu/Library/Application Support/ZixuYang/Spatial Stories IP2b/TestResults.xml\",\"file\":\"./Runtime/Export/Debug/Debug.bindings.h\",\"line\":40,\"stackTrace\":null}]}",
+      "annotations": null,
+      "meta": null
+    }
+  ],
+  "structuredContent": {
+    "success": true,
+    "message": "Retrieved 2 log entries.",
+    "data": [
+      {
+        "type": "Log",
+        "message": "IP2b asset/scene checks passed. Run EditMode tests and the Quest checklist in IP2b_START_HERE.md before the participant session.",
+        "file": "Assets/SpatialStoriesImmersive/Editor/IP2bProjectTools.cs",
+        "line": 31,
+        "stackTrace": null
+      },
+      {
+        "type": "Exception",
+        "message": "Saving results to: /Users/yangzixu/Library/Application Support/ZixuYang/Spatial Stories IP2b/TestResults.xml",
+        "file": "./Runtime/Export/Debug/Debug.bindings.h",
+        "line": 40,
+        "stackTrace": null
+      }
+    ]
+  },
+  "isError": false
+}

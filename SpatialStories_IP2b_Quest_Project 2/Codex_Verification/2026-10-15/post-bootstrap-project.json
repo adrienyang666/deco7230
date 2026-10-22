@@ -1,0 +1,11 @@
+{
+  "meta": null,
+  "contents": [
+    {
+      "uri": "mcpforunity://project/info",
+      "mimeType": "text/plain",
+      "meta": null,
+      "text": "{\"success\":true,\"message\":\"Retrieved project info.\",\"error\":null,\"data\":{\"projectRoot\":\"/Users/yangzixu/Downloads/SpatialStories_IP2b_Quest_Project 2\",\"projectName\":\"SpatialStories_IP2b_Quest_Project 2\",\"unityVersion\":\"6000.3.20f1\",\"platform\":\"StandaloneOSX\",\"assetsPath\":\"/Users/yangzixu/Downloads/SpatialStories_IP2b_Quest_Project 2/Assets\"},\"hint\":null}"
+    }
+  ]
+}

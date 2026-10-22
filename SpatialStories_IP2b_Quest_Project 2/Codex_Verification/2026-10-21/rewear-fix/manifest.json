@@ -1,0 +1,14 @@
+{
+  "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.cs": {
+    "before": "fd7f3a7289987a1fcff4c673c6ed2832aeb77661c1b04401ed3fcfc89ceb4981",
+    "after": "167a8c1bfcdd84f35d125a594c239262bcfc61dea205221cfb1d9f4448bdf961"
+  },
+  "Assets/SpatialStoriesImmersive/Runtime/ImmersiveStory.PlacementFeedback.cs": {
+    "before": "c8b53e0b67b3d417d63fcdb6ca656cfd002a7fafb32b43f45094182161ef71be",
+    "after": "8b9fab71f9d3d8c2b2eed9181f396030d1a7365e741f2d12ceb3980cabfffdb8"
+  },
+  "ProjectSettings/ProjectSettings.asset": {
+    "before": "3ea1d0095062fd185832816987f54bee6b7d803f69e67e9653e7b2fa9e499da9",
+    "after": "050fb911f0049918f231cef18e09b59ac265bccdc53d85ecce6de60b397a8a59"
+  }
+}

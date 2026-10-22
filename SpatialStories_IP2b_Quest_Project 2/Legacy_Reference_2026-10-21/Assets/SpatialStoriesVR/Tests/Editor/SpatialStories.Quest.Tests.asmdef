@@ -1,0 +1,6 @@
+{
+  "name": "SpatialStories.Quest.Tests",
+  "references": ["SpatialStories.Quest"],
+  "includePlatforms": ["Editor"],
+  "optionalUnityReferences": ["TestAssemblies"]
+}

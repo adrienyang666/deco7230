@@ -1,0 +1,10 @@
+{
+  "Library/BuildPlayerData/Editor/TypeDb-All 2.json": {
+    "sha256": "1cde7494a526c648e2b11348e51b6868ac243a9f78eaa3c920d1c38e9325140b",
+    "old_path_count": 49
+  },
+  "Library/BuildPlayerData/Player/TypeDb-All 2.json": {
+    "sha256": "cf24ae3db1224a046053cd5b0cf3edc28bfe97f4a839ae11aad309ebdd62ee08",
+    "old_path_count": 38
+  }
+}

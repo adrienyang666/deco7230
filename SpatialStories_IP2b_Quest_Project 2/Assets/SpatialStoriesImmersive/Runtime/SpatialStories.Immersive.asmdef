@@ -1,0 +1,6 @@
+{
+  "name": "SpatialStories.Immersive",
+  "rootNamespace": "SpatialStories.Immersive",
+  "references": ["Unity.InputSystem", "Unity.XR.Interaction.Toolkit", "Unity.XR.CoreUtils", "Unity.ugui"],
+  "autoReferenced": true
+}

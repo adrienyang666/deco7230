@@ -1,0 +1,130 @@
+{
+  "version": "1.3.3",
+  "android_code": 7,
+  "editmode": {
+    "passed": 37,
+    "failed": 0,
+    "job_id": "cefe82e47c0b4c058ad53c15d4203952"
+  },
+  "source_issue": "No tracking/app lifecycle recovery after initial alignment; r5 layout persists through pause/resume",
+  "evidence_before_fix": {
+    "session": "20261021_043733_462",
+    "pid": "6078",
+    "pause_s": 215.107,
+    "resume_s": 316.924,
+    "origin_change_observed": false,
+    "post_resume_eye_height_observed": false,
+    "reported": "拿起／重新戴上头显后，整个场景高度不对",
+    "manual_recenter": "user could not locate SESSION/RECENTER"
+  },
+  "quest_install": true,
+  "quest_rewear_retest": {
+    "date_local": "2026-10-21",
+    "timezone": "Australia/Brisbane",
+    "version": "1.3.3/code7",
+    "device_suffix": "04B2",
+    "posture": "seated",
+    "rewear_reply_verbatim": "高度自动恢复，元素也保留",
+    "overall_reply_verbatim": "目前看起来没有问题，功能也测试完了",
+    "disconnect_reply_verbatim": "那我断开链接了",
+    "result": "technical retest passed by user report",
+    "formal_participant_study": false,
+    "log_boundary": "Captured log contains initial/manual recenter entries, but no recovery request/commit or pause/resume for this rewear; automatic recovery branch execution is not independently logged."
+  },
+  "formal_participant_data_added": false,
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 2,
+    "seconds": 4.929882,
+    "version": "1.3.3",
+    "code": 7
+  },
+  "install_check": {
+    "serial_suffix": "04B2",
+    "version": "1.3.3",
+    "code": 7,
+    "pid": "16232",
+    "install": "Success",
+    "launch": "Starting: Intent { cmp=com.zixuyang.spatialstories.ip2b/com.unity3d.player.UnityPlayerGameActivity }\nStatus: ok\nLaunchState: COLD\nActivity: com.zixuyang.spatialstories.ip2b/com.unity3d.player.UnityPlayerGameActivity\nTotalTime: 155\nWaitTime: 182\nComplete\n",
+    "package_evidence": [
+      "appId=10154",
+      "primaryCpuAbi=arm64-v8a",
+      "versionCode=7 minSdk=32 targetSdk=36",
+      "versionName=1.3.3"
+    ],
+    "application_files_preserved": true
+  },
+  "apk": {
+    "bytes": 47773114,
+    "sha256": "e06074ba8d4a341794a31a7e84e720ed33c3a9c3814db3ef65b699e82afe3a8d",
+    "badging": [
+      "package: name='com.zixuyang.spatialstories.ip2b' versionCode='7' versionName='1.3.3' platformBuildVersionName='16' platformBuildVersionCode='36' compileSdkVersion='36' compileSdkVersionCodename='16'",
+      "sdkVersion:'32'",
+      "targetSdkVersion:'36'",
+      "native-code: 'arm64-v8a'"
+    ],
+    "il2cpp_metadata_markers": {
+      "[IP2b Quest startup r6]": true,
+      "[IP2b recovery r6]": true,
+      "[IP2b workspace r6]": true
+    },
+    "signature_v2_verified": true
+  },
+  "code_guide": {
+    "version": "1.3.3/code7",
+    "pages": 4,
+    "sha256": "2e4709075291247f51b1871be147d627bf14e976e4c8db020658203bbc71dbc5",
+    "render_qa": "four pages visually inspected, no overflow or missing glyphs",
+    "status_wording": "timeless pre-test check reminder; actual results recorded separately"
+  },
+  "cache_issue": {
+    "first_build_result": "Succeeded",
+    "first_build_errors": 3421,
+    "cause": "identical duplicate generated Player JSON files",
+    "quarantine": "before_duplicate_cache",
+    "root_creator_process": "unverified; no system sync settings changed"
+  },
+  "quest_functional_trial": {
+    "session": "20261021_045441_796",
+    "outcome": "complete",
+    "session_duration_seconds": 93.888,
+    "observed_events": [
+      "back_to_album",
+      "begin",
+      "create_or_edit_text",
+      "create_sticker",
+      "cross_photo_composition",
+      "cutout_demo_stopped_on_aim",
+      "cutout_discovery_dismissed",
+      "cutout_discovery_shown",
+      "cutout_entry_used",
+      "delete",
+      "editor_ready",
+      "flat_preview_ready",
+      "grab",
+      "invalid_drop_return",
+      "layer_backward",
+      "lift_photo_subject",
+      "open_sticker_sphere",
+      "open_text_sphere",
+      "photo_transform",
+      "place_overlay",
+      "place_photo_subject",
+      "placement_preview_lost",
+      "placement_preview_target",
+      "prototype_config",
+      "publish_confirmed",
+      "release",
+      "review",
+      "select_photo",
+      "select_source",
+      "session_end"
+    ],
+    "experienced_operator_technical_run": true,
+    "not_a_novice_five_minute_task_estimate": true,
+    "not_formal_participant_data": true
+  },
+  "classroom_baseline": "1.3.3/code7; user accepted technical functionality on 2026-10-21",
+  "quest_capture_stopped": true
+}

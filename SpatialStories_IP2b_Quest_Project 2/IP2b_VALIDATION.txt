@@ -1,0 +1,42 @@
+IP2b 1.3 import-fix validation - 2026-10-15
+
+OBSERVED | User's Unity 6000.3.20f1 screenshot: Safe Mode, duplicate UnityEngine.TestRunner/UnityEditor.TestRunner references in SpatialStories.Immersive.Tests.asmdef
+FIXED IN SOURCE | Removed the redundant explicit TestRunner references; retained TestAssemblies, Editor-only platform and runtime/XRI references
+PASS | All 9 project asmdefs: valid JSON, unique explicit references, no TestAssemblies combined with explicit TestRunner references
+PASS | Diff against delivered 1.3: only one asmdef and three documentation files changed; source scripts, scenes, packages, metadata and runtime version unchanged
+PENDING | User must reimport/recompile the fixed configuration in Unity; further errors, if any, have not yet been observed
+
+Previous static checks (2026-10-14; not Unity import or compilation):
+Baseline: delivered IP2b 1.2; Android version code 4.
+
+PASS | C# syntax parse | 49 files; not type compilation
+PASS | All C# and shader assets have Unity metadata
+PASS | Unique asset GUIDs | 459
+PASS | Assembly and package JSON
+PASS | Quest scene delta: only Enable Placement Feedback added
+PASS | Quest scene unique local IDs | 1638
+PASS | Simulator scene delta: only Enable Placement Feedback added
+PASS | Simulator scene unique local IDs | 1639
+PASS | Original scenes, rig, dependencies, photos and other baseline assets unchanged
+PASS | Surfer RGBA transparency and visible pixels above the alpha cutoff | alpha 0-254
+PASS | Eiffel RGBA transparency and visible pixels above the alpha cutoff | alpha 0-254
+PASS | Version 1.3 / Android code 4
+PASS | Only IP2b Quest enabled in Build Settings
+PASS | 20 IP2b EditMode test cases present - NOT EXECUTED
+PASS | IP2b_OBSERVATIONS.csv blank with unique columns
+PASS | IP2b_EVENT_NOTES.csv blank with unique columns
+PASS | Lecture principles explicitly pending, without fabricated findings
+PASS | Preview and release use one placement query (source inspection)
+PASS | Independent feedback root; visual-only component copies (source inspection)
+PASS | Ghost shader stereo macros and depth-tested alpha blending present (source inspection)
+PASS | One-paragraph research summary with five linked references
+
+NOT RUN | Unity import / C# type compilation / shader compilation
+NOT RUN | 20 supplied IP2b EditMode test cases
+NOT RUN | Play Mode ghost rendering, UI legibility, input isolation, disposal and timing
+NOT RUN | Quest stereo rendering, placement/preview consistency, comfort and frame rate
+NOT RUN | Android APK build or participant sessions
+
+No Unity Editor or Quest device is available in this environment.
+Source checks are not runtime validation. No participant results were generated.
+The exact five lecture-principle terms remain pending a lecture source.

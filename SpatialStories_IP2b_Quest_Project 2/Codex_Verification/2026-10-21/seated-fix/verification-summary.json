@@ -1,0 +1,434 @@
+{
+  "version": "1.3.2",
+  "android_code": 6,
+  "editmode": {
+    "passed": 31,
+    "failed": 0,
+    "skipped": 0,
+    "job_id": "7b753e54cd30407b91b4306d0697ee89"
+  },
+  "simulator": {
+    "session": "20261021_042714_284",
+    "automated_only": true,
+    "eye_y": 0.757,
+    "root_y": -0.005,
+    "root_uniform_scale": 0.4618182,
+    "focused_photo_bottom_y": 0.446658,
+    "ui_and_physics_source_target_match": true,
+    "steps": [
+      "Welcome",
+      "Browse",
+      "Edit",
+      "source Button onClick select without lift",
+      "tracked UI raycast and physics hit same root",
+      "cross-photo cutout placement",
+      "placed cutout click selects layer",
+      "text scaled with workspace",
+      "layer forward",
+      "flat preview",
+      "simulated publish completed"
+    ],
+    "complete": true
+  },
+  "quest": {
+    "serial_suffix": "04B2",
+    "installed_before_fix": "1.3.1/code5",
+    "technical_session": "20261021_040701_767",
+    "reported_posture": "seated, worn throughout",
+    "startup_r4_eye_y": 0.757,
+    "startup_r4_root_y": -0.893,
+    "reported_issues": [
+      "welcome low",
+      "photo and controls low/buried",
+      "cutout Trigger click no feedback"
+    ],
+    "fix_installed": true,
+    "full_task_run": false,
+    "formal_participant_data_added": false,
+    "install_check": {
+      "serial_suffix": "04B2",
+      "version": "1.3.2",
+      "code": 6,
+      "install": "Success",
+      "launch": "Starting: Intent { cmp=com.zixuyang.spatialstories.ip2b/com.unity3d.player.UnityPlayerGameActivity }\nStatus: ok\nLaunchState: COLD\nActivity: com.zixuyang.spatialstories.ip2b/com.unity3d.player.UnityPlayerGameActivity\nTotalTime: 176\nWaitTime: 208\nComplete\n",
+      "package_evidence": [
+        "primaryCpuAbi=arm64-v8a",
+        "versionCode=6 minSdk=32 targetSdk=36",
+        "versionName=1.3.2"
+      ],
+      "preserved_data": true
+    },
+    "r5_startup_observed": true,
+    "r5_startup_evidence": [
+      "10-21 14:36:47.530  6078  6111 I Unity   : [IP2b workspace] EyeY=0.758; FloorY=-0.005; Scale=0.463; FocusY=0.689; BinY=0.353; PublishY=0.393.",
+      "10-21 14:36:47.530  6078  6111 I Unity   : [IP2b Quest startup r5] Tracking ready; workspace aligned. Camera world Y=0.758; Content world Y=-0.005; scale=0.463.",
+      "10-21 14:37:33.462  6078  6111 I Unity   : [IP2b workspace] EyeY=1.078; FloorY=-0.005; Scale=0.657; FocusY=0.980; BinY=0.504; PublishY=0.560."
+    ],
+    "r5_eye_y": 0.758,
+    "r5_content_y": -0.005,
+    "r5_scale": 0.463,
+    "r5_focus_y": 0.689,
+    "r5_bin_y": 0.353,
+    "r5_publish_y": 0.393,
+    "r5_user_feedback": {
+      "date_local": "2026-10-21",
+      "timezone": "Australia/Brisbane",
+      "build": "1.3.2 / code 6",
+      "device_suffix": "04B2",
+      "type": "developer-user technical retest, not formal participant study",
+      "posture": "seated",
+      "verbatim_height_reply": "高度正常，照片不入地，能看到垃圾桶",
+      "verbatim_trigger_reply": "Trigger 有选中反馈",
+      "height_fix_retest": "passed by explicit user report",
+      "cutout_trigger_feedback_retest": "passed by explicit user report",
+      "remaining": [
+        "complete final-build task run including preview/publish",
+        "delete/undo",
+        "small pilot",
+        "formal participant study"
+      ],
+      "layer_usability_comment": "我想问这些layer的功能怎么用呀，看起来并不是很实用",
+      "layer_code_change_made": false
+    },
+    "previous_131_technical_publish_complete": true,
+    "r5_technical_session": "20261021_043733_462",
+    "r5_confirmed_events": [
+      {
+        "elapsed_s": "0.000",
+        "event": "begin",
+        "stage": "",
+        "detail": ""
+      },
+      {
+        "elapsed_s": "0.005",
+        "event": "prototype_config",
+        "stage": "Browse",
+        "detail": "version=1.3.2 | discovery=True | placement_feedback=True | gallery_glow=True"
+      },
+      {
+        "elapsed_s": "8.109",
+        "event": "select_photo",
+        "stage": "Browse",
+        "detail": "photo_02"
+      },
+      {
+        "elapsed_s": "10.168",
+        "event": "editor_ready",
+        "stage": "Edit",
+        "detail": "photo_02"
+      },
+      {
+        "elapsed_s": "10.169",
+        "event": "cutout_discovery_shown",
+        "stage": "Edit",
+        "detail": "photo_02"
+      },
+      {
+        "elapsed_s": "12.192",
+        "event": "cutout_demo_completed",
+        "stage": "Edit",
+        "detail": ""
+      },
+      {
+        "elapsed_s": "63.359",
+        "event": "select_source",
+        "stage": "Edit",
+        "detail": "direct_photo_03 | source=photo_03"
+      },
+      {
+        "elapsed_s": "64.614",
+        "event": "lift_photo_subject",
+        "stage": "Edit",
+        "detail": "cutout_1 | source=photo_03"
+      },
+      {
+        "elapsed_s": "64.614",
+        "event": "cutout_entry_used",
+        "stage": "Edit",
+        "detail": "direct_beside_s | cutout_1"
+      },
+      {
+        "elapsed_s": "64.614",
+        "event": "cutout_discovery_dismissed",
+        "stage": "Edit",
+        "detail": "grab_cutout_1"
+      },
+      {
+        "elapsed_s": "64.615",
+        "event": "grab",
+        "stage": "Edit",
+        "detail": "cutout_1"
+      },
+      {
+        "elapsed_s": "65.303",
+        "event": "placement_preview_target",
+        "stage": "Edit",
+        "detail": "cutout_1 | target=photo_02"
+      },
+      {
+        "elapsed_s": "67.334",
+        "event": "release",
+        "stage": "Edit",
+        "detail": "cutout_1"
+      },
+      {
+        "elapsed_s": "67.334",
+        "event": "place_photo_subject",
+        "stage": "Edit",
+        "detail": "cutout_1 | source=photo_03 | target=photo_02"
+      },
+      {
+        "elapsed_s": "67.334",
+        "event": "cross_photo_composition",
+        "stage": "Edit",
+        "detail": "cutout_1 | source=photo_03 | target=photo_02"
+      },
+      {
+        "elapsed_s": "68.668",
+        "event": "open_text_sphere",
+        "stage": "Edit",
+        "detail": ""
+      },
+      {
+        "elapsed_s": "78.610",
+        "event": "create_or_edit_text",
+        "stage": "Edit",
+        "detail": "text_2"
+      },
+      {
+        "elapsed_s": "86.248",
+        "event": "grab",
+        "stage": "Edit",
+        "detail": "text_2"
+      },
+      {
+        "elapsed_s": "86.664",
+        "event": "placement_preview_target",
+        "stage": "Edit",
+        "detail": "text_2 | target=photo_02"
+      },
+      {
+        "elapsed_s": "89.055",
+        "event": "release",
+        "stage": "Edit",
+        "detail": "text_2"
+      },
+      {
+        "elapsed_s": "89.055",
+        "event": "place_overlay",
+        "stage": "Edit",
+        "detail": "text_2 | source= | target=photo_02"
+      },
+      {
+        "elapsed_s": "89.057",
+        "event": "open_text_sphere",
+        "stage": "Edit",
+        "detail": ""
+      },
+      {
+        "elapsed_s": "97.471",
+        "event": "back_to_album",
+        "stage": "Browse",
+        "detail": ""
+      },
+      {
+        "elapsed_s": "120.331",
+        "event": "select_photo",
+        "stage": "Browse",
+        "detail": "photo_01"
+      },
+      {
+        "elapsed_s": "121.165",
+        "event": "grab",
+        "stage": "Browse",
+        "detail": "photo_01"
+      },
+      {
+        "elapsed_s": "123.860",
+        "event": "release",
+        "stage": "Browse",
+        "detail": "photo_01"
+      },
+      {
+        "elapsed_s": "124.304",
+        "event": "editor_ready",
+        "stage": "Edit",
+        "detail": "photo_01"
+      },
+      {
+        "elapsed_s": "125.497",
+        "event": "open_sticker_sphere",
+        "stage": "Edit",
+        "detail": ""
+      },
+      {
+        "elapsed_s": "127.360",
+        "event": "create_sticker",
+        "stage": "Edit",
+        "detail": "sticker_4_3"
+      },
+      {
+        "elapsed_s": "128.581",
+        "event": "grab",
+        "stage": "Edit",
+        "detail": "sticker_4_3"
+      },
+      {
+        "elapsed_s": "128.831",
+        "event": "placement_preview_target",
+        "stage": "Edit",
+        "detail": "sticker_4_3 | target=photo_01"
+      },
+      {
+        "elapsed_s": "129.944",
+        "event": "release",
+        "stage": "Edit",
+        "detail": "sticker_4_3"
+      },
+      {
+        "elapsed_s": "129.944",
+        "event": "place_overlay",
+        "stage": "Edit",
+        "detail": "sticker_4_3 | source= | target=photo_01"
+      },
+      {
+        "elapsed_s": "146.776",
+        "event": "lift_photo_subject",
+        "stage": "Edit",
+        "detail": "cutout_4 | source=photo_03"
+      },
+      {
+        "elapsed_s": "146.776",
+        "event": "cutout_entry_used",
+        "stage": "Edit",
+        "detail": "direct_beside_s | cutout_4"
+      },
+      {
+        "elapsed_s": "146.777",
+        "event": "grab",
+        "stage": "Edit",
+        "detail": "cutout_4"
+      },
+      {
+        "elapsed_s": "147.164",
+        "event": "placement_preview_target",
+        "stage": "Edit",
+        "detail": "cutout_4 | target=photo_01"
+      },
+      {
+        "elapsed_s": "148.388",
+        "event": "release",
+        "stage": "Edit",
+        "detail": "cutout_4"
+      },
+      {
+        "elapsed_s": "148.388",
+        "event": "place_photo_subject",
+        "stage": "Edit",
+        "detail": "cutout_4 | source=photo_03 | target=photo_01"
+      },
+      {
+        "elapsed_s": "148.389",
+        "event": "cross_photo_composition",
+        "stage": "Edit",
+        "detail": "cutout_4 | source=photo_03 | target=photo_01"
+      },
+      {
+        "elapsed_s": "151.692",
+        "event": "layer_backward",
+        "stage": "Edit",
+        "detail": "cutout_4 | crossed=sticker_4_3"
+      },
+      {
+        "elapsed_s": "153.803",
+        "event": "grab",
+        "stage": "Edit",
+        "detail": "photo_01"
+      },
+      {
+        "elapsed_s": "155.416",
+        "event": "release",
+        "stage": "Edit",
+        "detail": "photo_01"
+      },
+      {
+        "elapsed_s": "155.417",
+        "event": "photo_transform",
+        "stage": "Edit",
+        "detail": "photo_01"
+      },
+      {
+        "elapsed_s": "155.998",
+        "event": "grab",
+        "stage": "Edit",
+        "detail": "cutout_4"
+      },
+      {
+        "elapsed_s": "155.999",
+        "event": "placement_preview_target",
+        "stage": "Edit",
+        "detail": "cutout_4 | target=photo_01"
+      },
+      {
+        "elapsed_s": "157.222",
+        "event": "release",
+        "stage": "Edit",
+        "detail": "cutout_4"
+      },
+      {
+        "elapsed_s": "157.222",
+        "event": "place_photo_subject",
+        "stage": "Edit",
+        "detail": "cutout_4 | source=photo_03 | target=photo_01"
+      },
+      {
+        "elapsed_s": "157.222",
+        "event": "cross_photo_composition",
+        "stage": "Edit",
+        "detail": "cutout_4 | source=photo_03 | target=photo_01"
+      }
+    ],
+    "r5_source_trigger_event_observed": true,
+    "r5_cross_photo_placement_observed": true,
+    "r5_begin_pose": {
+      "eye_y": 1.078,
+      "floor_y": -0.005,
+      "uniform_scale": 0.657,
+      "focus_y": 0.98,
+      "bin_y": 0.504,
+      "publish_y": 0.56
+    }
+  },
+  "build_attempt1": {
+    "result": "Failed",
+    "cause": "identical unity-classes.jar and unity-classes 2.jar in generated Android Gradle cache",
+    "duplicate_named_generated_files": 809,
+    "quarantined": "before_build_cache/Gradle",
+    "source_code_error": false
+  },
+  "formal_results_filled": false,
+  "code_guide": {
+    "path": "/Users/yangzixu/Documents/Codex/2026-10-15/agents-md-codex-handoff-md-codex/outputs/SpatialStories_IP2b_明日测试功能代码速记_中英.pdf",
+    "bytes": 289970,
+    "sha256": "4ee963b40de956f4f8e80ff2d2d0ed7144355a142d123ae10087edae6ac4ac73",
+    "pages": 4,
+    "revised_for": "1.3.2/code6 seated scaling and cutout Trigger selection",
+    "render_qa": "All four rendered pages visually inspected by testing_lectures; no overflow/missing glyphs."
+  },
+  "build": {
+    "result": "Succeeded",
+    "errors": 0,
+    "warnings": 2,
+    "seconds": 3.896568,
+    "version": "1.3.2",
+    "code": 6
+  },
+  "apk_bytes": 47767858,
+  "apk_sha256": "238fe80af53d1eec7d1a9782982ed0f8c4b79503d7554f86d1ddab4bdeb7f219",
+  "build_attempt2": {
+    "result": "Succeeded",
+    "errors": 87,
+    "cause": "two old TypeDb-All 2.json files referenced 49+38 old Downloads assembly paths",
+    "resolved_in_final_build": true
+  }
+}

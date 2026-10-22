@@ -1,0 +1,11 @@
+{
+  "name": "SpatialStories.Immersive.Editor",
+  "rootNamespace": "SpatialStories.Immersive.Editor",
+  "references": [
+    "SpatialStories.Immersive",
+    "Unity.XR.Interaction.Toolkit",
+    "Unity.ugui"
+  ],
+  "includePlatforms": ["Editor"],
+  "autoReferenced": true
+}

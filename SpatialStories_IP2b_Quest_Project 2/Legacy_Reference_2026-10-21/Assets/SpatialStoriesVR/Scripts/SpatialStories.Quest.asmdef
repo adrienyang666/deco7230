@@ -1,0 +1,6 @@
+{
+  "name": "SpatialStories.Quest",
+  "rootNamespace": "SpatialStories.Quest",
+  "references": ["Unity.InputSystem", "Unity.XR.Interaction.Toolkit", "Unity.ugui"],
+  "autoReferenced": true
+}

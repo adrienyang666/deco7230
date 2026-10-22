@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: ef33418b736152bea1de85125c00ccdc
+ModelImporter:
+  serializedVersion: 22200
+  internalIDToNameTable:
+  - first:
+      43: 4300000
+    second: Star
+  externalObjects: {}
+  materials:
+    materialImportMode: 0
+  meshes:
+    globalScale: 1
+    useFileUnits: 0
+    useFileScale: 0
+    fileIdsGeneration: 1
+    meshCompression: 0
+    addColliders: 0
+    isReadable: 0
+    weldVertices: 0
+    bakeAxisConversion: 0
+  tangentSpace:
+    normalImportMode: 1
+    tangentImportMode: 2
+    normalSmoothAngle: 60
+  importAnimation: 0
