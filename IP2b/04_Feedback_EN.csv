@@ -1,0 +1,20 @@
+record_slot,source_page,field,transcription_status,english_rendering,uncertainty_note
+P01,2,naturalness_reason,partly_legible,The interaction did not match the participant's intuition.,The following English word is unclear; it resembles tiger. Do not silently replace it with trigger.
+P01,2,comfort_reason,unclear,[Reason not reliably legible.],"Some characters refer to use and a problem; insufficient evidence to label this flicker, discomfort or a habit issue."
+P01,2,release_cue,translated,Did not know.,Translation of the recorded Chinese response; the form does not identify it as a verbatim participant quotation.
+P01,2,requested_change,translated,Dragging had a delay and did not respond quickly.,Reported responsiveness issue; measured latency and cause were not recorded.
+P01,2,other_feedback,translated,Did not correctly change the ordering of different layers.,Kept alongside Set requested overlap = A and Explain overlap = I; sequence and exact assistance were not recorded.
+P01,2,stopping_or_missing_note,partly_legible,Unwanted content was not deleted [object unclear].,Differs from Delete and Undo = I. Preserve both; task timing and referent cannot be resolved from the sheet.
+P02,4,naturalness_reason,unclear,[English note not reliably legible.],Possibly includes reaching; no firm interpretation used in findings.
+P02,4,comfort_reason,no_readable_reason,,A horizontal mark only; no explanatory reason recorded.
+P02,4,release_cue,not_recorded,,Blank field.
+P02,4,requested_change,partly_legible,Requested a record of content that had already been posted.,"The note reads a [menu/memo unclear] records everything posted already; the history request is legible, the exact UI label is not."
+P02,4,other_feedback,translated,The Undo button was difficult to see clearly.,"Do not infer whether size, position, contrast or the five-second window caused the difficulty."
+P02,4,stopping_or_missing_note,translated,The grabbed item was not centred.,Meaning of centred is not specified; no measured offset is available.
+P05,10,naturalness_reason,partly_legible,hard to find the [unclear],"Final word cannot be identified reliably, so no particular feature is assigned."
+P05,10,comfort_reason,unclear,[Reason not reliably legible.],Only an intensifier equivalent to very is reliably legible; do not infer positive or negative comfort.
+P05,10,release_cue,not_recorded,,Blank field.
+P05,10,requested_change,partly_legible,The layer bar could be positioned higher.,English translation of the legible clause; opening wording is unclear.
+P05,10,other_feedback,not_recorded,,Blank field.
+P05,10,stopping_or_missing_note,not_recorded,,Blank field.
+P05,10,bottom_margin_note,partly_legible,Show progress in a corner [associated action unclear].,The English term before the Chinese clause is unclear; do not label the action as recording or loading.
